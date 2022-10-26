@@ -12,7 +12,8 @@ $SETGLOBAL countrydata "1model.dat"
 $SETGLOBAL modeldata    "1model.xlsx"
 
 *Section 2: Base dynamic calibration file
-$SETGLOBAL basedata  "2simulation.xlsx"
+*[JS 17/10/2022: original line for basedata, replaced by the scenario-specific one below:] $SETGLOBAL basedata  "2simulation.xlsx"
+$SETGLOBAL basedata  "2simulation_SDGgapSces.xlsx"
 
 *Section 3: Reporting file defining table dimenions
 $SETGLOBAL reportdata  "3report.xlsx"

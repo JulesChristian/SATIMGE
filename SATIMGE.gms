@@ -433,7 +433,9 @@ FSGDP(FS) = yes;
 FSGDP('fa') = no;
 FSGDP('al') = no;
 
-execute 'gdxxrw.exe i=Drivers.xlsm o=driverspop.gdx index=index_E2G!a6';
+* [JS 17/10: replaced original loading of drivers by one specific for a socio-economic scenario for WB SDG beyond the gap analysis]
+* execute 'gdxxrw.exe i=Drivers.xlsm o=driverspop.gdx index=index_E2G!a6';
+execute 'gdxxrw.exe i=Drivers_SDGbaselinePOPonly.xlsm o=driverspop.gdx index=index_E2G!a6';
 execute_load "driverspop.gdx" POP_GR;
 
 
@@ -508,7 +510,8 @@ ELSE
 
 
 * Read in GDP and Population from Drivers Workbook
-  execute 'gdxxrw.exe i=Drivers.xlsm o=drivers.gdx index=index_E2G!a6';
+* [JS 17/10/22: I disabled the following to change the Drivers file to be used:] execute 'gdxxrw.exe i=Drivers.xlsm o=drivers.gdx index=index_E2G!a6';
+  execute 'gdxxrw.exe i=Drivers_SDGbaselinePOPonly.xlsm o=drivers.gdx index=index_E2G!a6';
   execute_load "drivers.gdx" GVA_FS POP YHE TFHPOP MFHHT QD_FS;
 
 
