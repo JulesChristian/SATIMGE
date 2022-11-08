@@ -17,6 +17,8 @@
    );
 
 *Government
+* [JS 2022_11_08:] be ware that there are consequences for the use of DTAXDYN,
+* which receives its values through an IF(GOVCLOS... statement in 2simulation_loop.inc)
   IF(GOVCLOS(XC) EQ 1,
    TRNADJ.FX  = TRNADJ0;
    TAADJ.FX   = TAADJ0;
@@ -199,6 +201,8 @@ IF(GOVCLOS(XC) EQ 11,
    );
 
 *SAVINGS AND INVESTMENT and Govt expenditure closure
+* [JS 2022_11_08:] be ware that there are consequences for the use of IADJ.L,
+* which is replaced by IADJDYN and receives its value through an IF(SICLOS... statement in 2simulation_loop.inc)
   IF(SICLOS(XC) EQ 1,
    MPSADJ.FX = MPSADJ.L * (1+MPSGR(XC,TC));
    DMPS.LO   = -INF;

@@ -140,7 +140,7 @@ $offtext
 * SICLOS(XC) has already been declared in 2simultion.inc as: SICLOS(XC) = CLOSURES('S-I',XC);
 * The parameter IADJDYN(X,T) is declared in 2simulation.inc
 * Values for cge SDGgap scenario SDGbaseTra_UrbAS_IRT:
- IF(SICLOS(XC) EQ 1,
+ IF(SICLOS(XC) EQ 1 or SICLOS(XC) eq 6,
  IADJDYN(X,'2019') = 1;
 IADJDYN(X,'2020') = 0.908201;
 IADJDYN(X,'2021') = 0.935893;
@@ -177,7 +177,7 @@ IADJDYN(X,'2050') = 1.880227;
 
 * [JS 2022_11_03] Another Time series for a new exogenous dynamics DTAXDYN(X,T)
 * The parameter DTAXDYN(X,T) is declared in 2simulation.inc and used in 2closures.inc
-IF(GOVCLOS(XC) EQ 1,
+IF(GOVCLOS(XC) EQ 1 or GOVCLOS(XC) EQ 11,
 DTAXDYN(X,'2019') = 0 ;
 DTAXDYN(X,'2020') = 0.055036;
 DTAXDYN(X,'2021') = -0.039161;
