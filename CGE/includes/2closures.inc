@@ -160,6 +160,29 @@
    GSAV.FX    = GSAVX('BASE',TC,TT);
    );
 
+* [JS 2022_11_03:] I created this new (11th GOV) closure rule for the purpose of analysing government budget impacts of SDG Beyond the Gap investments.
+* Be ware, compared to for example GOVCLOS eq 1 there is one endogenous variable more here, while there is one less in the New (6th) S-I closure below:
+
+IF(GOVCLOS(XC) EQ 11,
+* Government transfers scaling factor set to 0 for TRNADJ0 = 0
+   TRNADJ.FX  = TRNADJ0;
+* Activity tax scaling factor
+   TAADJ.FX   = TAADJ0;
+* TAPS is point change in activity tax rate, set at 0 (TAPS0 = 0 in 1model.inc )
+   TAPS.FX    = TAPS0;
+* [JS, 2022_03_11: I replaced the following on direct tax rate adjustment by a new parameter DTAXDYN, declared in 2simulation.inc]
+* TINSADJ.FX = TINSADJ.L + DTAXGR(XC,TC);
+* TINSADJ.FX = DTAXDYN(XC,TC);
+  TINSADJ.LO = -INF;
+  TINSADJ.UP = +INF;
+  TQADJ.FX   = TQADJ0;
+  TQPS.FX    = TQPS0;
+  TVAADJ.FX  = TVAADJ0;
+  TVAPS.FX   = TVAPS0;
+  DTINS.FX   = DTINS0;
+  GSAV.LO    = -INF;
+  GSAV.UP    = +INF;
+  );
 
 *Current account
   IF(ROWCLOS(XC) EQ 1,
@@ -234,6 +257,24 @@
    GADJ.UP   = +INF;
    GOVSHR.FX = GOVSHR0;
    );
+* [JS 2022_11_03:] I created this new (6th S-I) closure rule for the purpose of analysing government budget impacts of SDG Beyond the Gap investments.
+* Be ware, compared to for example SICLOS eq 3 there is one endogenous variable less here, while there is one more in the New (11th) Gov closure above:
+ IF(SICLOS(XC) EQ 6,
+*   MPSADJ.FX = (1+MPSADJ.L) * (1+MPSGR(XC,TC)) - 1;
+   MPSADJ.FX = MPSADJ0;
+   DMPS.FX   = DMPS0;
+* IADJ.FX('S-E') = IADJSESIM(XC,TC);
+* IADJ.LO('S-I') = -INF;
+* IADJ.UP('S-I') = +INF;
+* [JS 2022_11_03:] The following line (IADJ.FX) fixes investment to the IADJDYN trajectory, see 2closure.inc and 2closure_loop.inc .
+  IADJ.FX(IT) = IADJ.L(IT);
+  INVSHR.LO = -INF;
+  INVSHR.UP = +INF;
+* [JS 2022_11_03:] Just a reminder to check how GADJ and GOVGR work.
+  GADJ.FX   = GADJ.L * (1+GOVGR(XC,TC));
+  GOVSHR.LO = -INF;
+  GOVSHR.UP = +INF;
+  );
 
 *Factor closures ------------------
 

@@ -107,6 +107,10 @@ PARAMETERS
 
 CTA_EMRR(CTA)=0;
 
+
+
+
+
 * [JS 18/10/2022: The following loading of the general "basedata" file (generated
 * by 1model.gms which only runs in a certain model run setup) has been replaced
 * by specific loading of a 2simulation***.xlsx file.]
@@ -284,44 +288,15 @@ Parameter
  GOVCLOS(XC)   = CLOSURES('GOV',XC);
  SICLOS(XC)    = CLOSURES('S-I',XC);
 
-*[JS 2022_10_27] IADJ for exogenous scaling of investments when S-I closure set at 1 (or 2).
-* This needs to be manually rewritten for each scenario.
-* Current values are for SDGbaseTra_UrbAS_IRTHigh and SDGbaseTra_UrbAS_IRTLow scnearios.
+* [JS 2022_10_27] Time series added for a new parameter IADJDYN(T) (as IADJX was already in use by 2initialize.inc and 2results.inc)
+* The purpose of the time series for IADJDYN(T) is to create exogenous investment dynamics for the WB SDG Beyond the Gap report in combination with a fixed investment s-i closure (SICLOS).
+* SICLOS(XC) has already been declared in 2simultion.inc as: SICLOS(XC) = CLOSURES('S-I',XC);
+* The time series itself for IADJDYN(TC) are set in 2simulation_loop.inc
 
- IF(SICLOS(XC) EQ 1,
-IADJ(2019) = 1;
-IADJ(2020) = 0,908201;
-IADJ(2021) = 0,935893;
-IADJ(2022) = 0,955153;
-IADJ(2023) = 0,972932;
-IADJ(2024) = 0,999061;
-IADJ(2025) = 1,031165;
-IADJ(2026) = 1,066603;
-IADJ(2027) = 1,103476;
-IADJ(2028) = 1,147833;
-IADJ(2029) = 1,189182;
-IADJ(2030) = 1,228833;
-IADJ(2031) = 1,214543;
-IADJ(2032) = 1,253287;
-IADJ(2033) = 1,294349;
-IADJ(2034) = 1,341857;
-IADJ(2035) = 1,391133;
-IADJ(2036) = 1,439718;
-IADJ(2037) = 1,484366;
-IADJ(2038) = 1,529897;
-IADJ(2039) = 1,578099;
-IADJ(2040) = 1,624885;
-IADJ(2041) = 1,665786;
-IADJ(2042) = 1,707345;
-IADJ(2043) = 1,756273;
-IADJ(2044) = 1,809358;
-IADJ(2045) = 1,865248;
-IADJ(2046) = 1,920113;
-IADJ(2047) = 1,913136;
-IADJ(2048) = 1,899;
-IADJ(2049) = 1,89134;
-IADJ(2050) = 1,880227
-);
+ Parameter
+  IADJDYN(X,T);
+
+
 
 *Institutional savings and tax rate adjustments
  MPS01SIM(XC,INSDNG)  = 1;

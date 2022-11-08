@@ -1,4 +1,5 @@
 
+
 *Loop over simulations
 LOOP(XC$MRUNX(RUN,XC),
 
@@ -134,9 +135,95 @@ $offtext
 *@ ica('celec','altrp-f','NAT') = 0.72*ica0('celec','altrp-f','NAT');
 *@ ica('ccoal-hgh','amore','NAT') = 0.3*ica0('ccoal-hgh','amore','NAT');
 
+* [JS 2022_10_27] Time series added for a new parameter IADJDYN(T) (as IADJX was already in use by 2initialize.inc and 2results.inc)
+* The purpose of the time series for IADJDYN(T) is to create exogenous investment dynamics for the WB SDG Beyond the Gap report in combination with a fixed investment s-i closure (SICLOS).
+* SICLOS(XC) has already been declared in 2simultion.inc as: SICLOS(XC) = CLOSURES('S-I',XC);
+* The parameter IADJDYN(X,T) is declared in 2simulation.inc
+* Values for cge SDGgap scenario SDGbaseTra_UrbAS_IRT:
+ IF(SICLOS(XC) EQ 1,
+ IADJDYN(X,'2019') = 1;
+IADJDYN(X,'2020') = 0.908201;
+IADJDYN(X,'2021') = 0.935893;
+IADJDYN(X,'2022') = 0.955153;
+IADJDYN(X,'2023') = 0.972932;
+IADJDYN(X,'2024') = 0.999061;
+IADJDYN(X,'2025') = 1.031165;
+IADJDYN(X,'2026') = 1.066603;
+IADJDYN(X,'2027') = 1.103476;
+IADJDYN(X,'2028') = 1.147833;
+IADJDYN(X,'2029') = 1.189182;
+IADJDYN(X,'2030') = 1.228833;
+IADJDYN(X,'2031') = 1.214543;
+IADJDYN(X,'2032') = 1.253287;
+IADJDYN(X,'2033') = 1.294349;
+IADJDYN(X,'2034') = 1.341857;
+IADJDYN(X,'2035') = 1.391133;
+IADJDYN(X,'2036') = 1.439718;
+IADJDYN(X,'2037') = 1.484366;
+IADJDYN(X,'2038') = 1.529897;
+IADJDYN(X,'2039') = 1.578099;
+IADJDYN(X,'2040') = 1.624885;
+IADJDYN(X,'2041') = 1.665786;
+IADJDYN(X,'2042') = 1.707345;
+IADJDYN(X,'2043') = 1.756273;
+IADJDYN(X,'2044') = 1.809358;
+IADJDYN(X,'2045') = 1.865248;
+IADJDYN(X,'2046') = 1.920113;
+IADJDYN(X,'2047') = 1.913136;
+IADJDYN(X,'2048') = 1.899;
+IADJDYN(X,'2049') = 1.89134;
+IADJDYN(X,'2050') = 1.880227;
+ );
+
+* [JS 2022_11_03] Another Time series for a new exogenous dynamics DTAXDYN(X,T)
+* The parameter DTAXDYN(X,T) is declared in 2simulation.inc and used in 2closures.inc
+IF(GOVCLOS(XC) EQ 1,
+DTAXDYN(X,'2019') = 0 ;
+DTAXDYN(X,'2020') = 0.055036;
+DTAXDYN(X,'2021') = -0.039161;
+DTAXDYN(X,'2022') = -0.003511;
+DTAXDYN(X,'2023') = -0.002812;
+DTAXDYN(X,'2024') = -0.005284;
+DTAXDYN(X,'2025') = -0.005229;
+DTAXDYN(X,'2026') = -0.004265;
+DTAXDYN(X,'2027') = -0.005824;
+DTAXDYN(X,'2028') = -0.00563;
+DTAXDYN(X,'2029') = -0.006154;
+DTAXDYN(X,'2030') = -0.005299;
+DTAXDYN(X,'2031') = -0.007578;
+DTAXDYN(X,'2032') = -0.006047;
+DTAXDYN(X,'2033') = -0.00631;
+DTAXDYN(X,'2034') = -0.008039;
+DTAXDYN(X,'2035') = -0.005454;
+DTAXDYN(X,'2036') = -0.005851;
+DTAXDYN(X,'2037') = -0.005229;
+DTAXDYN(X,'2038') = -0.003798;
+DTAXDYN(X,'2039') = -0.005995;
+DTAXDYN(X,'2040') = -0.003987;
+DTAXDYN(X,'2041') = -0.006855;
+DTAXDYN(X,'2042') = -0.002199;
+DTAXDYN(X,'2043') = -0.003093;
+DTAXDYN(X,'2044') = -0.003404;
+DTAXDYN(X,'2045') = -0.003093;
+DTAXDYN(X,'2046') = -0.000562;
+DTAXDYN(X,'2047') = 0.010204;
+DTAXDYN(X,'2048') = 0.003319;
+DTAXDYN(X,'2049') = 0.003439;
+DTAXDYN(X,'2050') = 0.004894;
+;)
+
+
 
 *   Loop over CGE model solve periods
  LOOP(TC$(NOT fail),
+
+* [JS 2022_10_27] Time series added for a new parameter IADJDYN(T) in 2simulation.inc
+* ( IADJX was already in use by 2initialize.inc and 2results.inc )
+* The purpose of the time series for IADJDYN(T) is to create exogenous investment dynamics for the WB SDG Beyond the Gap report in combination with a fixed investment s-i closure (SICLOS).
+* Values for IADJDYN have been set in 2simulation.inc.
+
+ IADJ.FX('S-I')= IADJDYN(XC,TC);
+
 
 *fh 71218
 *bm+fh 201118 removed - already in 2runtimes.inc
