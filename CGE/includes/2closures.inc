@@ -19,6 +19,7 @@
 *Government
 * [JS 2022_11_08:] be ware that there are consequences for the use of DTAXDYN,
 * which receives its values through an IF(GOVCLOS... statement in 2simulation_loop.inc)
+* any closure rule using DTAXDYN should thus be included in the conditional statement for GOVCLOS in 2simulation_loop.inc.
   IF(GOVCLOS(XC) EQ 1,
    TRNADJ.FX  = TRNADJ0;
    TAADJ.FX   = TAADJ0;
@@ -266,7 +267,9 @@ IF(GOVCLOS(XC) EQ 11,
  IF(SICLOS(XC) EQ 6,
 *   MPSADJ.FX = (1+MPSADJ.L) * (1+MPSGR(XC,TC)) - 1;
    MPSADJ.FX = MPSADJ0;
-   DMPS.FX   = DMPS0;
+* JS 2022_11_09: Changed definition of DMPS to follow exogenous dynamics as defined in 2simulation_loop.inc;
+   DMPS.FX = DMPSDYN(XC,TC);
+* DMPS.FX   = DMPS0;
 * IADJ.FX('S-E') = IADJSESIM(XC,TC);
 * IADJ.LO('S-I') = -INF;
 * IADJ.UP('S-I') = +INF;
@@ -274,7 +277,6 @@ IF(GOVCLOS(XC) EQ 11,
   IADJ.FX(IT) = IADJ.L(IT);
   INVSHR.LO = -INF;
   INVSHR.UP = +INF;
-* [JS 2022_11_03:] Just a reminder to check how GADJ and GOVGR work.
   GADJ.FX   = GADJ.L * (1+GOVGR(XC,TC));
   GOVSHR.LO = -INF;
   GOVSHR.UP = +INF;

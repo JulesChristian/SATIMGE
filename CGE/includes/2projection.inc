@@ -47,8 +47,10 @@ PARAMETER
  POPGR(H,X,T)            household population growth projections
  MPSGR(X,T)              private savings growth rate
  DTAXGR(X,T)             direct tax rate on enterprises and households
-* [JS 2022_11_03:] Parameter added for fixing direct tax rates for non-gov domestic institutions if Gov Closure (GOVCLOS) eq 1)
+* [JS 2022_11_03:] Parameter added for fixing direct tax rates for non-gov domestic institutions if Gov Closure (GOVCLOS) eq 1, but doesn't work as hoped so not used yet for the time being)
  DTAXDYN(X,T)            exogenous dynamics replacing DTAXGR() if GOVCLOS eq 1 (fixed taxe and flex gov savings)
+* [JS 2022_11_09:] Parameter DMPSDYN added for fixing non government domestic saving rate changes under new GOVCLOS eq 11 rule:
+ DMPSDYN(X,T)            exogenous dynamics to fix non-government domestic institution saving rate changes
 ;
 $load TFPPROJ STFPAD
 $loaddc FPRDPROJ FACPROJ MISCPROJ SFACAD SFPRDAD SMISCAD SPOPAD WPROJ SWAD SMISCAD2 SFACAD2

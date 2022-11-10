@@ -139,20 +139,20 @@ $offtext
 * The purpose of the time series for IADJDYN(T) is to create exogenous investment dynamics for the WB SDG Beyond the Gap report in combination with a fixed investment s-i closure (SICLOS).
 * SICLOS(XC) has already been declared in 2simultion.inc as: SICLOS(XC) = CLOSURES('S-I',XC);
 * The parameter IADJDYN(X,T) is declared in 2simulation.inc
-* Values for cge SDGgap scenario SDGbaseTra_UrbAS_IRT:
+* Values from NI_Baseline with Govclos eq 3 and SICLOS eq 4:
  IF(SICLOS(XC) EQ 1 or SICLOS(XC) eq 6,
- IADJDYN(X,'2019') = 1;
+ IADJDYN(X,'2019') = 1 ;
 IADJDYN(X,'2020') = 0.908201;
 IADJDYN(X,'2021') = 0.935893;
 IADJDYN(X,'2022') = 0.955153;
 IADJDYN(X,'2023') = 0.972932;
-IADJDYN(X,'2024') = 0.999061;
-IADJDYN(X,'2025') = 1.031165;
-IADJDYN(X,'2026') = 1.066603;
-IADJDYN(X,'2027') = 1.103476;
-IADJDYN(X,'2028') = 1.147833;
-IADJDYN(X,'2029') = 1.189182;
-IADJDYN(X,'2030') = 1.228833;
+IADJDYN(X,'2024') = 0.993205;
+IADJDYN(X,'2025') = 1.017697;
+IADJDYN(X,'2026') = 1.045522;
+IADJDYN(X,'2027') = 1.074783;
+IADJDYN(X,'2028') = 1.111527;
+IADJDYN(X,'2029') = 1.145263;
+IADJDYN(X,'2030') = 1.177301;
 IADJDYN(X,'2031') = 1.214543;
 IADJDYN(X,'2032') = 1.253287;
 IADJDYN(X,'2033') = 1.294349;
@@ -173,11 +173,51 @@ IADJDYN(X,'2047') = 1.913136;
 IADJDYN(X,'2048') = 1.899;
 IADJDYN(X,'2049') = 1.89134;
 IADJDYN(X,'2050') = 1.880227;
- );
+);
+
+
+* [JS 2022_11_09] Another Time series for a new exogenous dynamics DMPSDYN(X,T)
+* The parameter DMPSDYN(X,T) is declared in 2projection.inc and used in 2closures.inc
+* Values from NI_Baseline with Govclos eq 3 and SICLOS eq 4:
+ IF(GOVCLOS(XC) EQ 11,
+DMPSDYN(X,'2019') = 0;
+DMPSDYN(X,'2020') = -0.000752;
+DMPSDYN(X,'2021') = 0.000761;
+DMPSDYN(X,'2022') = 0.001494;
+DMPSDYN(X,'2023') = 0.001341;
+DMPSDYN(X,'2024') = 0.001231;
+DMPSDYN(X,'2025') = 0.001467;
+DMPSDYN(X,'2026') = 0.00253;
+DMPSDYN(X,'2027') = 0.00377;
+DMPSDYN(X,'2028') = 0.003166;
+DMPSDYN(X,'2029') = 0.003674;
+DMPSDYN(X,'2030') = 0.00411;
+DMPSDYN(X,'2031') = 0.004399;
+DMPSDYN(X,'2032') = 0.004983;
+DMPSDYN(X,'2033') = 0.005536;
+DMPSDYN(X,'2034') = 0.006251;
+DMPSDYN(X,'2035') = 0.007671;
+DMPSDYN(X,'2036') = 0.008466;
+DMPSDYN(X,'2037') = 0.008531;
+DMPSDYN(X,'2038') = 0.008505;
+DMPSDYN(X,'2039') = 0.008184;
+DMPSDYN(X,'2040') = 0.007999;
+DMPSDYN(X,'2041') = 0.007482;
+DMPSDYN(X,'2042') = 0.007063;
+DMPSDYN(X,'2043') = 0.007007;
+DMPSDYN(X,'2044') = 0.007147;
+DMPSDYN(X,'2045') = 0.007438;
+DMPSDYN(X,'2046') = 0.004923;
+DMPSDYN(X,'2047') = 0.000427;
+DMPSDYN(X,'2048') = -0.005077;
+DMPSDYN(X,'2049') = -0.010248;
+DMPSDYN(X,'2050') = -0.015007;
+;)
+
 
 * [JS 2022_11_03] Another Time series for a new exogenous dynamics DTAXDYN(X,T)
 * The parameter DTAXDYN(X,T) is declared in 2simulation.inc and used in 2closures.inc
-IF(GOVCLOS(XC) EQ 1 or GOVCLOS(XC) EQ 11,
+IF(GOVCLOS(XC) EQ 1,
 DTAXDYN(X,'2019') = 0 ;
 DTAXDYN(X,'2020') = 0.055036;
 DTAXDYN(X,'2021') = -0.039161;
