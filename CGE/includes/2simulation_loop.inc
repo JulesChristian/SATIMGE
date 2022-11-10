@@ -139,20 +139,20 @@ $offtext
 * The purpose of the time series for IADJDYN(T) is to create exogenous investment dynamics for the WB SDG Beyond the Gap report in combination with a fixed investment s-i closure (SICLOS).
 * SICLOS(XC) has already been declared in 2simultion.inc as: SICLOS(XC) = CLOSURES('S-I',XC);
 * The parameter IADJDYN(X,T) is declared in 2simulation.inc
-* Values from NI_Baseline with Govclos eq 3 and SICLOS eq 4:
+* Values for scenario (SDGTRABase_BAU) :
  IF(SICLOS(XC) EQ 1 or SICLOS(XC) eq 6,
- IADJDYN(X,'2019') = 1 ;
+ IADJDYN(X,'2019') = 1;
 IADJDYN(X,'2020') = 0.908201;
 IADJDYN(X,'2021') = 0.935893;
-IADJDYN(X,'2022') = 0.955153;
-IADJDYN(X,'2023') = 0.972932;
-IADJDYN(X,'2024') = 0.993205;
-IADJDYN(X,'2025') = 1.017697;
-IADJDYN(X,'2026') = 1.045522;
-IADJDYN(X,'2027') = 1.074783;
-IADJDYN(X,'2028') = 1.111527;
-IADJDYN(X,'2029') = 1.145263;
-IADJDYN(X,'2030') = 1.177301;
+IADJDYN(X,'2022') = 0.958526;
+IADJDYN(X,'2023') = 0.976365;
+IADJDYN(X,'2024') = 0.996704;
+IADJDYN(X,'2025') = 1.021272;
+IADJDYN(X,'2026') = 1.049176;
+IADJDYN(X,'2027') = 1.078524;
+IADJDYN(X,'2028') = 1.115353;
+IADJDYN(X,'2029') = 1.149181;
+IADJDYN(X,'2030') = 1.181311;
 IADJDYN(X,'2031') = 1.214543;
 IADJDYN(X,'2032') = 1.253287;
 IADJDYN(X,'2033') = 1.294349;
@@ -212,6 +212,44 @@ DMPSDYN(X,'2047') = 0.000427;
 DMPSDYN(X,'2048') = -0.005077;
 DMPSDYN(X,'2049') = -0.010248;
 DMPSDYN(X,'2050') = -0.015007;
+;)
+
+* [JS 2022_11_10] Another Time series for a new exogenous dynamics GDAJDYN(X,T)
+* The parameter GDAJDYN(X,T) is declared in 2projection.inc and used in 2closures.inc
+* Values change for each scenario with different government expenditure, here for scenario (SDGTRABase_BAU):
+ IF(GOVCLOS(XC) EQ 11,
+GADJDYN(X,'2019') = 1;
+GADJDYN(X,'2020') = 1.023629;
+GADJDYN(X,'2021') = 1.047816;
+GADJDYN(X,'2022') = 1.096273;
+GADJDYN(X,'2023') = 1.122036;
+GADJDYN(X,'2024') = 1.148447;
+GADJDYN(X,'2025') = 1.175533;
+GADJDYN(X,'2026') = 1.203275;
+GADJDYN(X,'2027') = 1.231706;
+GADJDYN(X,'2028') = 1.260789;
+GADJDYN(X,'2029') = 1.29059;
+GADJDYN(X,'2030') = 1.32108;
+GADJDYN(X,'2031') = 1.352296;
+GADJDYN(X,'2032') = 1.384249;
+GADJDYN(X,'2033') = 1.416957;
+GADJDYN(X,'2034') = 1.450438;
+GADJDYN(X,'2035') = 1.484711;
+GADJDYN(X,'2036') = 1.519793;
+GADJDYN(X,'2037') = 1.555704;
+GADJDYN(X,'2038') = 1.592464;
+GADJDYN(X,'2039') = 1.630092;
+GADJDYN(X,'2040') = 1.668609;
+GADJDYN(X,'2041') = 1.708037;
+GADJDYN(X,'2042') = 1.748396;
+GADJDYN(X,'2043') = 1.789709;
+GADJDYN(X,'2044') = 1.831998;
+GADJDYN(X,'2045') = 1.875286;
+GADJDYN(X,'2046') = 1.919597;
+GADJDYN(X,'2047') = 1.964955;
+GADJDYN(X,'2048') = 2.011385;
+GADJDYN(X,'2049') = 2.058912;
+GADJDYN(X,'2050') = 2.107561;
 ;)
 
 
@@ -383,7 +421,14 @@ $offtext
 
     icagr(C,'aprtr',TC)$(EHIntensity(C,'aprtr',TC-1) gt 0.0001) = EHIntensity(C,'aprtr',TC)/EHIntensity(C,'aprtr',TC-1);
 
+* [JS 2022_11_10: exogenous growth of government consumption between 2022 and 2030 (up to a certain limit) of construction and public transport to parameterise WB scenarios:
+    IF(ORD(TC) GE 2020 AND ORD(TC) LE 2030,
+    icagr('ccons','agsrv',TC)=1.8;
+    );
 
+    IF(ORD(TC) GE 2020 AND ORD(TC) LE 2030,
+    icagr('cftrp-l','agsrv',TC)=1.05;
+    );
 *ICAGR(C,A,TC)=1;
 
     ica(C,A,'NAT')$(ICAGR(C,A,TC) and ica0(C,A,'NAT')) = ica(C,A,'NAT')*ICAGR(C,A,TC);

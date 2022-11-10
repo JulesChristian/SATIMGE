@@ -277,7 +277,9 @@ IF(GOVCLOS(XC) EQ 11,
   IADJ.FX(IT) = IADJ.L(IT);
   INVSHR.LO = -INF;
   INVSHR.UP = +INF;
-  GADJ.FX   = GADJ.L * (1+GOVGR(XC,TC));
+* JS 2022_11_10: Changed definition of DMPS to follow exogenous dynamics as defined in 2simulation_loop.inc;
+  GADJ.FX = GADJDYN(XC,TC);
+* GADJ.FX   = GADJ.L * (1+GOVGR(XC,TC));
   GOVSHR.LO = -INF;
   GOVSHR.UP = +INF;
   );

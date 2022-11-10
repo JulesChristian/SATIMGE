@@ -51,6 +51,8 @@ PARAMETER
  DTAXDYN(X,T)            exogenous dynamics replacing DTAXGR() if GOVCLOS eq 1 (fixed taxe and flex gov savings)
 * [JS 2022_11_09:] Parameter DMPSDYN added for fixing non government domestic saving rate changes under new GOVCLOS eq 11 rule:
  DMPSDYN(X,T)            exogenous dynamics to fix non-government domestic institution saving rate changes
+* [JS 2022_11_10:] Parameter GADJDYN added for fixing change in volume of government consumption (demand)
+ GADJDYN(X,T)
 ;
 $load TFPPROJ STFPAD
 $loaddc FPRDPROJ FACPROJ MISCPROJ SFACAD SFPRDAD SMISCAD SPOPAD WPROJ SWAD SMISCAD2 SFACAD2
