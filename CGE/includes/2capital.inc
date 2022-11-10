@@ -4,6 +4,7 @@
  CAPSHR2TOT(FCAP)        = SUM((RD,A)$ANFX(A,RD), QF.L(FCAP,A,RD));
  CAPSHR2(FCAP,A,RD)$(ANFX(A,RD) AND CAPSHR2TOT(FCAP)) = QF.L(FCAP,A,RD)/CAPSHR2TOT(FCAP);
 
+* [JS 2022_10_11] See 1model.dat Koption is set to 2 !
 IF (KOPTION EQ 1,
 *Define capital composition BMAT and price of capital PKAP.
 *Assume BMAT composition is the same for all kinds of capital
@@ -57,12 +58,17 @@ IF (KOPTION EQ 2,
  QF.L('FEGY','AELEC','NAT')$(QF.L('FEGY','AELEC','NAT') LT QFS.UP('FEGY')) = QFS.UP('FEGY');
 * QF.L('FSAS','APETR','NAT')$(QF.L('FSAS','APETR','NAT') LT QFS.UP('FSAS')) = QFS.UP('FSAS');
 
- RKAP(FCAP,A,RD)$(ANFX(A,RD) AND QF0(FCAP,A,RD)) = DKAP(FCAP,A,RD)/QF.L(FCAP,A,RD) - natdrate;
+* [JS 2022_11_10] To allow for the substraction in productive output I define a dynamic/trajectory-based exogenous correction of RKAP(FCAP,A,RD) called "NOYKFACTOR(X,T)"
+ RKAP(FCAP,A,RD)$(ANFX(A,RD) AND QF0(FCAP,A,RD)) = DKAP(FCAP,A,RD)/QF.L(FCAP,A,RD) - natdrate - NOYKFACTOR(XC,TC);
+* RKAP(FCAP,A,RD)$(ANFX(A,RD) AND QF0(FCAP,A,RD)) = DKAP(FCAP,A,RD)/QF.L(FCAP,A,RD) - natdrate;
 
 *For capital that is entirely fixed
  RKAP(FCAP,A,RD)$(AFX(A,RD) AND QF0(FCAP,A,RD))   = AFXGR(A,RD,XC,TC);
 
 *Apply annual growth rates over gaps
+*[JS 2022_11_10] For My Information: This seems to be where QF.L gets updated to its new amount ...
+* It is unclear whether I can tinker with it without disturbing either a capital share balance (above) or price-elastic CES functions later on in a model run.
+* In theory it should be possible to intervene around the same place as where natdrate is subtracted of the capital stock (a few lines higher)
  QF.L(FCAP,A,RD)$QF0(FCAP,A,RD) = QF.L(FCAP,A,RD)*(1 + RKAP(FCAP,A,RD));
 
 *bm turning off domestic crude when existing GTL plant shuts down

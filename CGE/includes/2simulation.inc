@@ -76,6 +76,9 @@ PARAMETERS
  BMAT(C,FCAP)            capital composition matrix by type of capital
  PKAP(FCAP)              price of capital good by type
  GFCF                    nominal gross fixed capital formation
+*[JS 2022_11_10] NOYKFACTOR introduced to render a part of new investment unproductive for the purpose of WB investment project.
+* It is applied in 2capital.inc, and time series are defined in 2simulation_loop.inc.
+ NOYKFACTOR(X,T)         a time-series exogenous factor for scenario parameterisation to render a part of new investment unproductive
 
 *Detailed TFP growth projections
  SECGR(A,RD,X,T)         detailed-annual sectoral TFP growth projections
@@ -111,7 +114,7 @@ CTA_EMRR(CTA)=0;
 
 
 
-* [JS 18/10/2022: The following loading of the general "basedata" file (generated
+* [JS 2022_10_18: The following loading of the general "basedata" file (generated
 * by 1model.gms which only runs in a certain model run setup) has been replaced
 * by specific loading of a 2simulation***.xlsx file.]
 * $call    "gdxxrw i=cge\%basedata% o=basedata index=index!a6 checkdate"

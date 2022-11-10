@@ -422,12 +422,17 @@ $offtext
     icagr(C,'aprtr',TC)$(EHIntensity(C,'aprtr',TC-1) gt 0.0001) = EHIntensity(C,'aprtr',TC)/EHIntensity(C,'aprtr',TC-1);
 
 * [JS 2022_11_10: exogenous growth of government consumption between 2022 and 2030 (up to a certain limit) of construction and public transport to parameterise WB scenarios:
-    IF(ORD(TC) GE 2020 AND ORD(TC) LE 2030,
-    icagr('ccons','agsrv',TC)=1.8;
+    IF(ORD(TC) GE 2 AND ORD(TC) LE 5,
+    icagr('ccons','agsrv',TC)=3.55;
     );
-
-    IF(ORD(TC) GE 2020 AND ORD(TC) LE 2030,
-    icagr('cftrp-l','agsrv',TC)=1.05;
+    IF(ORD(TC) GE 6 AND ORD(TC) LE 12,
+    icagr('ccons','agsrv',TC)=1.029;
+    );
+    IF(ORD(TC) GE 4 AND ORD(TC) LE 4,
+    icagr('cftrp-l','agsrv',TC)=1.2;
+    );
+    IF(ORD(TC) GE 5 AND ORD(TC) LE 12,
+    icagr('cftrp-l','agsrv',TC)=1.035;
     );
 *ICAGR(C,A,TC)=1;
 
@@ -681,6 +686,39 @@ $offtext
     ANFX(A,RD)=NO;
     ANFX(A,RD)$(NOT AFX(A,RD))=YES;
 
+* [JS 2022_11_10] Scenario-dependent time-series for NOYKFACTOR(X,T), see 2simulation.inc and 2capital.inc:
+    NOYKFACTOR(X,'2019') = 0.0;
+ NOYKFACTOR(X,'2020') = 0.0;
+ NOYKFACTOR(X,'2021') = 0.0;
+ NOYKFACTOR(X,'2022') = 0.003549;
+ NOYKFACTOR(X,'2023') = 0.003543;
+ NOYKFACTOR(X,'2024') = 0.003533;
+ NOYKFACTOR(X,'2025') = 0.003519;
+ NOYKFACTOR(X,'2026') = 0.003506;
+ NOYKFACTOR(X,'2027') = 0.003492;
+ NOYKFACTOR(X,'2028') = 0.003461;
+ NOYKFACTOR(X,'2029') = 0.003434;
+ NOYKFACTOR(X,'2030') = 0.003412;
+ NOYKFACTOR(X,'2031') = 0.0;
+ NOYKFACTOR(X,'2032') = 0.0;
+ NOYKFACTOR(X,'2033') = 0.0;
+ NOYKFACTOR(X,'2034') = 0.0;
+ NOYKFACTOR(X,'2035') = 0.0;
+ NOYKFACTOR(X,'2036') = 0.0;
+ NOYKFACTOR(X,'2037') = 0.0;
+ NOYKFACTOR(X,'2038') = 0.0;
+ NOYKFACTOR(X,'2039') = 0.0;
+ NOYKFACTOR(X,'2040') = 0.0;
+ NOYKFACTOR(X,'2041') = 0.0;
+ NOYKFACTOR(X,'2042') = 0.0;
+ NOYKFACTOR(X,'2043') = 0.0;
+ NOYKFACTOR(X,'2044') = 0.0;
+ NOYKFACTOR(X,'2045') = 0.0;
+ NOYKFACTOR(X,'2046') = 0.0;
+ NOYKFACTOR(X,'2047') = 0.0;
+ NOYKFACTOR(X,'2048') = 0.0;
+ NOYKFACTOR(X,'2049') = 0.0;
+ NOYKFACTOR(X,'2050') = 0.0;
 
 
 *       Capital stock accumulation and allocation
