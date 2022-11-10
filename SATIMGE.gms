@@ -461,6 +461,7 @@ $include cge\includes\2energychecksinit.inc
 
 
 $include KLEM\KLEM_init.inc
+$include WB-Infrastructure\WBI_init.inc
 
 
 Alias (MILESTONYR,MY), (P,PP);

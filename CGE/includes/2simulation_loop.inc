@@ -763,6 +763,6 @@ $include cge\includes\2energyfcast.inc
 
 $batinclude cge\includes\eSAGE_Report.inc
 
-
+$include WB-Infrastructure\WBI_Report.inc
 );
 *end XC loop
