@@ -8997,13 +8997,7 @@ Decim=1
 PlaneRownr=-1
 PlaneFilter1=aosrv
 
-[RP:2TIMESREPORT]
-1=
-
 [RP:GHGENERGYREPORT]
-1=
-
-[RP:GHGPROCESSREPORT]
 1=
 
 [RP:UPDATE_DEMAND AND PROFILES]
@@ -12006,7 +12000,7 @@ PlaneRownr=-1
 
 [GDXDISP: MISCPROJ Par 3]
 PlaneDim=0
-RowDim=3
+RowDim=2
 Squeeze=1
 SqTrail0=0
 Order=1,2,3
@@ -13324,12 +13318,6 @@ Order=1
 Decim=7
 PlaneRownr=-1
 
-[RP:WBI_REPORT]
-1=
-
-[RP:WBI_INIT]
-1=
-
 [RP:WB_SATIMGE]
 1=
 
@@ -13342,7 +13330,7 @@ RowDim=2
 Squeeze=1
 SqTrail0=0
 Order=1,2,3
-Decim=7
+Decim=2
 PlaneRownr=-1
 
 [RP:2PROJECTION]
@@ -13386,11 +13374,6 @@ PlaneRownr=-1
 
 [RP:2INITIALIZE]
 1=
-
-[RP:1MODEL]
-1=gdx=model s=model
-2=gdx = model s = model
-3=
 
 [RP:2SIMULATION]
 1=
@@ -13497,50 +13480,230 @@ Order=1
 Decim=7
 PlaneRownr=-1
 
-[RP:2SIMULATION_LOOP]
-1=
-
 [RP:2CAPITAL]
 1=
 
+[GDXDISP: YG_DTAX Var 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:1MODEL]
+1=gdx=model s=model
+2=gdx = model s = model
+3=
+
+[GDXDISP: MISCAC Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: MISCAD Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: MISCAD2 Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[RP:GHGPROCESSREPORT]
+1=
+
+[RP:WBI_INIT]
+1=
+
+[RP:WBI_REPORT]
+1=
+
+[RP:2TIMESREPORT]
+1=
+
+[GDXDISP: TS_SEASON Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: REMEXP Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PE0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: OUTAGGFOC Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: K_EnergyBillFuels Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FPPP Alias 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FELAS Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FACADJEMP Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: alphaq0 Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: cellcutofflo Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: Externalities Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EXPSHR Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EXPX Par 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EXR0 Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[RP:2SIMULATION_LOOP]
+1=
+
 [RP:SATIMGE]
-1=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK
-2=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClos
-3=r=cge\model, gdx = SDG_NoInv_Base_ClosuresSI6GOV11_WBIndics
-4=r=cge\model, gdx = SDG_NoInv_Base_ClosuresSI6GOV11
-5=r=cge\model, gdx = SDG_NoInv_Baseline
-6=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestNewClosures03
-7=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestNewClosures02
-8=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_OldClosures
-9=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestNewClosures
-10=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestDTAXDYNnocost
-11=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestGov1nocost
-12=r=cge\model, gdx = TEST_IADJ_SDGbaseTra_UrbAS_IRTHigh
-13=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU
-14=r=cge\model, gdx = TEST_SDGbaseTra_RurAS_UAcombi_4Free
-15=r=cge\model, gdx = SDGgap_Test04_TFPPROJ
-16=r=cge\model, gdx = SDGgap_Test03_POPonly
-17=r=cge\model, gdx = SDGgap_Test03_driverschanges
-18=r=cge\model, gdx = SDGgap_Test02
-19=r=cge\model, gdx = 75Gton3IterTest
-20=r=cge\model, gdx = 9Gton3IterTest
+1=r=cge\model, gdx = SDGbaseTra_AgMax
+2=r=cge\model, gdx = SDGbaseTra_AgMed
+3=r=cge\model, gdx = SDGbaseTra_AgMin
+4=r=cge\model, gdx = SDGbaseTra_RurAS_CRS
+5=r=cge\model, gdx = SDGbaseTra_RurAS_CRG
+6=r=cge\model, gdx = SDGbaseTra_RurAS_CUS
+7=r=cge\model, gdx = SDGbaseTra_RurAS_CUG
+8=r=cge\model, gdx = SDGbaseTra_RurAS_UAcombi
+9=r=cge\model, gdx = SDGbaseTra_UrbAS_ERTHigh_NewClos
+10=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_NewClos
+11=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK3
+12=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK2
+13=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK
+14=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClos
+15=r=cge\model, gdx = SDG_NoInv_Base_ClosuresSI6GOV11_WBIndics
+16=r=cge\model, gdx = SDG_NoInv_Base_ClosuresSI6GOV11
+17=r=cge\model, gdx = SDG_NoInv_Baseline
+18=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestNewClosures03
+19=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestNewClosures02
+20=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_OldClosures
 
 [MRUFILES]
 1=C:\Models\SATIMGE\SATIMGE.lst
-2=C:\Models\SATIMGE\SDGbaseTra_UrbAS_BAU_NewClos.gdx
-3=C:\Models\SATIMGE\SDGbaseTra_UrbAS_BAU_NewClosNOYK.gdx
-4=C:\Models\SATIMGE\CGE\includes\2capital.inc
-5=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
-6=C:\Models\SATIMGE\CGE\includes\2closures.inc
-7=C:\Models\SATIMGE\CGE\includes\2simulation.inc
-8=C:\Models\SATIMGE\CGE\1model.gms
-9=C:\Models\SATIMGE\1model.lst
+2=C:\Models\SATIMGE\SDGbaseTra_UrbAS_IRTHigh_NewClos.gdx
+3=C:\Models\SATIMGE\SDGbaseTra_AgMin.gdx
+4=C:\Models\SATIMGE\SDGbaseTra_AgMed.gdx
+5=C:\Models\SATIMGE\SDGbaseTra_AgMax.gdx
+6=C:\Models\SATIMGE\SDGbaseTra_RurAS_CRG.gdx
+7=C:\Models\SATIMGE\SDGbaseTra_RurAS_CRS.gdx
+8=C:\Models\SATIMGE\SDGbaseTra_RurAS_CUS.gdx
+9=C:\Models\SATIMGE\SATIM\includes\2TIMESReport.inc
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\SATIMGE.gms
+FILE0=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
 FILE1=C:\Models\SATIMGE\SATIMGE.gms
+FILE2=C:\Models\SATIMGE\SATIMGE.gms
 MAXIM=0
-TOP=5
-LEFT=119
-HEIGHT=873
-WIDTH=1337
+TOP=9
+LEFT=3
+HEIGHT=707
+WIDTH=1103

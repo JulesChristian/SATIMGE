@@ -2,9 +2,14 @@
 * Bruno Merven November 2022
 
 SETS
-   WBI_Ind WBI indicators / C_GVA, MPSX, TINSX, YIX, C_SavingsINS, FSAVX, GSAVX, C_PubDef, C_TSav, QINVX, PQX, C_InvVal,
-         IADJX, C_QINV_IADJ, INVSHRX, GADJX, GOVSHRX, GOVGR, TRNADJX, trnsfrx_gov, trnsfrx_row, C_NetTrnsGov2Ins, EGX, QFSX, C_QFSlab,
-         P_ActivePop, P_WAgePop, C_BroadUnEmpRate, C_LabForcePart, PalmaRatio, 20-20Ratio, QVAX, PVAX, C_GovCons      /
+   WBI_Ind WBI indicators /
+         C_GVA, GDP_RUN, GOVSHRX, INVSHRX, C_QFSlab, PalmaRatio, 20-20Ratio, C_PubDef,
+         YIX, C_YIX, TINSX, MPSX, C_SavingsINS,
+         YGX, EGX, GADJX, GOVGR, C_GovCons, GSAVX, GOVTAB,
+         EXR, FSAVX, C_TSav,
+         QINVX, PQX, C_InvVal, IADJX, C_QINV_IADJ,
+         TRNADJX, trnsfrx_gov, trnsfrx_row, C_NetTrnsGov2Ins,
+         QFSX, P_ActivePop, P_WAgePop, C_BroadUnEmpRate, C_LabForcePart, QVAX, PVAX     /
 ;
 
 Parameters

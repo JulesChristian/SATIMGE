@@ -13,7 +13,8 @@ WBI('YIX',INS,TC) = YIX(INS,XC,TC,'2050');
 WBI('C_SavingsINS',INS,TC) = YIX(INS,XC,TC,'2050')*(1-TINSX(INS,XC,TC,'2050'))*MPSX(INS,XC,TC,'2050');
 WBI('C_SavingsINS','total',TC) = sum(ACNT,WBI('C_SavingsINS',ACNT,TC));
 
-WBI('FSAVX','total',TC) = FSAVX(XC,TC,'2050');
+* [JS 2022_11_11] FSAV should be multiplied by the exchange rate to get the value in Rands (Local Currency Units):
+WBI('FSAVX','total',TC) = FSAVX(XC,TC,'2050')*EXR.L;
 
 WBI('GSAVX','total',TC) = GSAVX(XC,TC,'2050');
 
@@ -68,3 +69,26 @@ WBI('PVAX',A,TC) = PVAX(A,'nat',XC,TC,'2050');
 
 WBI('C_GovCons',C,TC) = QGX(C,XC,TC,'2050')*PQX(C,XC,TC,'2050');
 WBI('C_GovCons','total',TC) = sum(ACNT,WBI('C_GovCons',ACNT,TC));
+
+*[JS 2022_11_11 added]
+* doesn't work: WBI('GDP_RUN','total',TC) = GDP_RUN(TC);
+
+WBI('C_YIX','total',TC) = SUM(INS,YIX(INS,XC,TC,'2050'));
+
+WBI('YGX','total',TC) = YGX(XC,TC,'2050');
+
+* doesn't work: WBI('EXR','total',TC) = EXR.L(XC,TC);
+
+* doesn't work: ('GOVTAB','DIRTAX',TC) = GOVTAB('DIRTAX',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','FACTAX',TC) = GOVTAB('FACTAX',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','FACINC',TC) = GOVTAB('FACINC',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','TRNSFR',TC) = GOVTAB('TRNSFR',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','ACTTAX',TC) = GOVTAB('ACTTAX',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','VATAX',TC) = GOVTAB('VATAX',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','IMPTAX',TC) = GOVTAB('IMPTAX',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','EXPTAX',TC) = GOVTAB('EXPTAX',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','COMTAX',TC) = GOVTAB('COMTAX',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','CO2D',TC) = GOVTAB('CO2D',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','CO2M',TC) = GOVTAB('CO2M',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','CO2E',TC) = GOVTAB('CO2E',XC,TC,'2050');
+* doesn't work: WBI('GOVTAB','UTAX',TC) = GOVTAB('UTAX',XC,TC,'2050');
