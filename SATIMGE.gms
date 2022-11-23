@@ -462,7 +462,9 @@ $include cge\includes\2energychecksinit.inc
 
 $include KLEM\KLEM_init.inc
 $include WB-Infrastructure\WBI_init.inc
-
+*[JS 2022_11_23] For WB SDG project I added 3report_init here which in 2simulation_loop.inc will serve to include and run 3report_loop.inc.
+* Not in use, because of problems-to-be-solved with parameters in the 3report_loop.inc file that was included in the 2simulation_loop.inc file.
+* $include cge\includes\3report_init.inc
 
 Alias (MILESTONYR,MY), (P,PP);
 

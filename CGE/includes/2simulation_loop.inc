@@ -890,5 +890,10 @@ $include cge\includes\2energyfcast.inc
 $batinclude cge\includes\eSAGE_Report.inc
 
 $include WB-Infrastructure\WBI_Report.inc
+
+*[JS 2022_11_23 I mean to include the GDPTAB calculations of the 3report_loop.inc file, but some parameters are not properly called on,
+* so there are some issues remaining to be solved.
+* $include cge\includes\3report_loop.inc
+
 );
 *end XC loop
