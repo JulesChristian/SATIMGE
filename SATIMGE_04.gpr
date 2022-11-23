@@ -7338,11 +7338,11 @@ Decim=7
 PlaneRownr=-1
 
 [GDXDIFF]
-FILE1=C:\Models\SATIMGE\testClean2.gdx
-FILE2=C:\Models\SATIMGE_Tsitica\test.gdx
-OUTFL=
+FILE1=C:\Models\SATIMGE\SDG_NoInv_Base_ClosSI6GOV11_repro03.gdx
+FILE2=C:\Models\SATIMGE\SDG_NoInv_Base_ClosSI6GOV11_repro02.gdx
+OUTFL=NoInv_NewClos_vs_Urb_BAU
 EPS=0.0
-RELEPS=0.0
+RELEPS=0.01
 SETIGN=0
 FIELD=All fields
 FIELDONLY=0
@@ -8780,9 +8780,6 @@ Decim=7
 PlaneRownr=-1
 
 [RP:3REPORT_INIT]
-1=
-
-[RP:ESAGE_REPORT]
 1=
 
 [RP:REFRESH_DEMSTART]
@@ -11956,9 +11953,6 @@ PlaneRownr=-1
 [RP:3REPORT_LOOP]
 1=
 
-[RP:1REPBASE]
-1=
-
 [RP:1DIAGNOSTICS]
 1=
 
@@ -13378,9 +13372,6 @@ PlaneRownr=-1
 [RP:2SIMULATION]
 1=
 
-[RP:2CLOSURES]
-1=
-
 [GDXDISP: TVAADJ Var 0]
 PlaneDim=0
 RowDim=0
@@ -13491,11 +13482,6 @@ SqTrail0=0
 Order=1
 Decim=7
 PlaneRownr=-1
-
-[RP:1MODEL]
-1=gdx=model s=model
-2=gdx = model s = model
-3=
 
 [GDXDISP: MISCAC Set 1]
 PlaneDim=0
@@ -13662,48 +13648,566 @@ Order=
 Decim=7
 PlaneRownr=-1
 
+[RP:1REPBASE]
+1=
+
+[GDXDISP: TINS Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: TINSX Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,4,5,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AMAT Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ARMINGTON2 Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ASAM Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: BalanceCheck Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CCON Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CCONX Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CESVAFOC Equ 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CESVAPRD Equ 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: co2ex Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: co2m Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: co2mx Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COMEQUIL Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COMPRDFN1 Equ 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: COSTMIN Equ 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CPRC Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CTA_EM Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CTA_EMR Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CTA_EMRRX Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CTA_EMRX Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CTA_EMX Par 6]
+PlaneDim=0
+RowDim=6
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CTOT Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: DistanceMatrix Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: DistLower Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: DistUpper Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: DKAP Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: DKAPX Par 7]
+PlaneDim=0
+RowDim=7
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6,7
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EBCHECK Par 8]
+PlaneDim=0
+RowDim=8
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5,6,7,8
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EG Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EGDEF Equ 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EGX Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EH Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EHDEF Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EHX Par 5]
+PlaneDim=0
+RowDim=5
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4,5
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EINVQINV Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ESUPPLY Equ 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: EXPRESID2 Equ 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FACEQUIL Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FHMMB Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: FilesCompared Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GADJ Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GADJX Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,3,4,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GOVBAL Equ 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GOVDEM Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GOVSHRX Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,3,4,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GSAVX Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,3,4,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: YG_DTAXX Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,3,4,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: YG_NTAXX Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,3,4,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: YFX Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,4,5,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: YGX Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,3,4,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: YIX Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,4,5,3
+Decim=7
+PlaneRownr=-1
+
+[RP:ESAGE_REPORT]
+1=
+
+[GDXDISP: TRII Var 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[RP:1MODEL]
+1=gdx=model s=model
+2=gdx = model s = model
+3=
+
+[GDXDISP: HFORE Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: MFHHT Set 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: YHE Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:SATIMGE]
+1=r=cge\model, gdx = SDG_NoInv_Base_ClosSI6GOV11_repro03
+2=r=cge\model, gdx = SDG_NoInv_Base_ClosSI6GOV11_repro01
+3=r=cge\model, gdx = SDGbaseTra_AgMax
+4=r=cge\model, gdx = SDGbaseTra_AgMed
+5=r=cge\model, gdx = SDGbaseTra_AgMin
+6=r=cge\model, gdx = SDGbaseTra_RurAS_CRS
+7=r=cge\model, gdx = SDGbaseTra_RurAS_CRG
+8=r=cge\model, gdx = SDGbaseTra_RurAS_CUS
+9=r=cge\model, gdx = SDGbaseTra_RurAS_CUG
+10=r=cge\model, gdx = SDGbaseTra_RurAS_UAcombi
+11=r=cge\model, gdx = SDGbaseTra_UrbAS_ERTHigh_NewClos
+12=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_NewClos
+13=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK3
+14=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK2
+15=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK
+16=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClos
+17=r=cge\model, gdx = SDG_NoInv_Base_ClosuresSI6GOV11_WBIndics
+18=r=cge\model, gdx = SDG_NoInv_Base_ClosuresSI6GOV11
+19=r=cge\model, gdx = SDG_NoInv_Baseline
+20=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestNewClosures03
+
+[RP:2CLOSURES]
+1=
+
 [RP:2SIMULATION_LOOP]
 1=
 
-[RP:SATIMGE]
-1=r=cge\model, gdx = SDGbaseTra_AgMax
-2=r=cge\model, gdx = SDGbaseTra_AgMed
-3=r=cge\model, gdx = SDGbaseTra_AgMin
-4=r=cge\model, gdx = SDGbaseTra_RurAS_CRS
-5=r=cge\model, gdx = SDGbaseTra_RurAS_CRG
-6=r=cge\model, gdx = SDGbaseTra_RurAS_CUS
-7=r=cge\model, gdx = SDGbaseTra_RurAS_CUG
-8=r=cge\model, gdx = SDGbaseTra_RurAS_UAcombi
-9=r=cge\model, gdx = SDGbaseTra_UrbAS_ERTHigh_NewClos
-10=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_NewClos
-11=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK3
-12=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK2
-13=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK
-14=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClos
-15=r=cge\model, gdx = SDG_NoInv_Base_ClosuresSI6GOV11_WBIndics
-16=r=cge\model, gdx = SDG_NoInv_Base_ClosuresSI6GOV11
-17=r=cge\model, gdx = SDG_NoInv_Baseline
-18=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestNewClosures03
-19=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestNewClosures02
-20=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_OldClosures
-
 [MRUFILES]
-1=C:\Models\SATIMGE\SATIMGE.lst
-2=C:\Models\SATIMGE\SDGbaseTra_UrbAS_IRTHigh_NewClos.gdx
-3=C:\Models\SATIMGE\SDGbaseTra_AgMin.gdx
-4=C:\Models\SATIMGE\SDGbaseTra_AgMed.gdx
-5=C:\Models\SATIMGE\SDGbaseTra_AgMax.gdx
-6=C:\Models\SATIMGE\SDGbaseTra_RurAS_CRG.gdx
-7=C:\Models\SATIMGE\SDGbaseTra_RurAS_CRS.gdx
-8=C:\Models\SATIMGE\SDGbaseTra_RurAS_CUS.gdx
-9=C:\Models\SATIMGE\SATIM\includes\2TIMESReport.inc
+1=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
+2=C:\Models\SATIMGE\CGE\includes\2closures.inc
+3=C:\Models\SATIMGE\SATIMGE.lst
+4=C:\Models\SATIMGE\NoInv_NewClos_vs_Urb_BAU.log
+5=C:\Models\SATIMGE\NoInv_NewClos_vs_Urb_BAU.gdx
+6=C:\Models\SATIMGE\CGE\1model.gms
+7=C:\Models\SATIMGE\SDG_NoInv_Baseline.gdx
+8=C:\Models\SATIMGE\SDG_NoInv_Base_ClosuresSI6GOV11_WBIndics.gdx
+9=C:\Models\SATIMGE\SDG_NoInv_Base_ClosuresSI6GOV11.gdx
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
-FILE1=C:\Models\SATIMGE\SATIMGE.gms
+FILE0=C:\Models\SATIMGE\SATIMGE.gms
+FILE1=C:\Models\SATIMGE\SDG_NoInv_Base_ClosSI6GOV11_repro02.gdx
 FILE2=C:\Models\SATIMGE\SATIMGE.gms
 MAXIM=0
-TOP=9
-LEFT=3
-HEIGHT=707
-WIDTH=1103
+TOP=5
+LEFT=27
+HEIGHT=671
+WIDTH=1239

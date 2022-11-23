@@ -141,18 +141,18 @@ $offtext
 * The parameter IADJDYN(X,T) is declared in 2simulation.inc
 * Values for scenario (SDGTRABase_BAU) :
  IF(SICLOS(XC) EQ 1 or SICLOS(XC) eq 6,
- IADJDYN(X,'2019') = 1;
+IADJDYN(X,'2019') = 1;
 IADJDYN(X,'2020') = 0.908201;
 IADJDYN(X,'2021') = 0.935893;
-IADJDYN(X,'2022') = 0.999628;
-IADJDYN(X,'2023') = 1.01826;
-IADJDYN(X,'2024') = 1.039518;
-IADJDYN(X,'2025') = 1.06512;
-IADJDYN(X,'2026') = 1.09408;
-IADJDYN(X,'2027') = 1.124581;
-IADJDYN(X,'2028') = 1.1627;
-IADJDYN(X,'2029') = 1.197933;
-IADJDYN(X,'2030') = 1.23145;
+IADJDYN(X,'2022') = 0.955153;
+IADJDYN(X,'2023') = 0.972932;
+IADJDYN(X,'2024') = 0.993205;
+IADJDYN(X,'2025') = 1.017697;
+IADJDYN(X,'2026') = 1.045522;
+IADJDYN(X,'2027') = 1.074783;
+IADJDYN(X,'2028') = 1.111527;
+IADJDYN(X,'2029') = 1.145263;
+IADJDYN(X,'2030') = 1.177301;
 IADJDYN(X,'2031') = 1.214543;
 IADJDYN(X,'2032') = 1.253287;
 IADJDYN(X,'2033') = 1.294349;
@@ -219,37 +219,37 @@ DMPSDYN(X,'2050') = -0.015007;
 * Values change for each scenario with different government expenditure, here for scenario (SDGTRABase_BAU):
  IF(GOVCLOS(XC) EQ 11,
 GADJDYN(X,'2019') = 1;
-GADJDYN(X,'2020') = 1.023629;
-GADJDYN(X,'2021') = 1.047816;
-GADJDYN(X,'2022') = 1.108221;
-GADJDYN(X,'2023') = 1.148931;
-GADJDYN(X,'2024') = 1.190985;
-GADJDYN(X,'2025') = 1.234511;
-GADJDYN(X,'2026') = 1.279436;
-GADJDYN(X,'2027') = 1.325992;
-GADJDYN(X,'2028') = 1.374381;
-GADJDYN(X,'2029') = 1.424707;
-GADJDYN(X,'2030') = 1.476631;
-GADJDYN(X,'2031') = 1.511522;
-GADJDYN(X,'2032') = 1.547237;
-GADJDYN(X,'2033') = 1.583797;
-GADJDYN(X,'2034') = 1.621221;
-GADJDYN(X,'2035') = 1.659528;
-GADJDYN(X,'2036') = 1.698741;
-GADJDYN(X,'2037') = 1.738881;
-GADJDYN(X,'2038') = 1.779969;
-GADJDYN(X,'2039') = 1.822027;
-GADJDYN(X,'2040') = 1.86508;
-GADJDYN(X,'2041') = 1.90915;
-GADJDYN(X,'2042') = 1.954261;
-GADJDYN(X,'2043') = 2.000438;
-GADJDYN(X,'2044') = 2.047706;
-GADJDYN(X,'2045') = 2.096092;
-GADJDYN(X,'2046') = 2.14562;
-GADJDYN(X,'2047') = 2.196319;
-GADJDYN(X,'2048') = 2.248215;
-GADJDYN(X,'2049') = 2.301338;
-GADJDYN(X,'2050') = 2.355717;
+GADJDYN(X,'2020') = 0.936996;
+GADJDYN(X,'2021') = 0.963686;
+GADJDYN(X,'2022') = 0.983729;
+GADJDYN(X,'2023') = 1.002964;
+GADJDYN(X,'2024') = 1.021905;
+GADJDYN(X,'2025') = 1.042309;
+GADJDYN(X,'2026') = 1.063303;
+GADJDYN(X,'2027') = 1.087466;
+GADJDYN(X,'2028') = 1.122706;
+GADJDYN(X,'2029') = 1.154275;
+GADJDYN(X,'2030') = 1.185407;
+GADJDYN(X,'2031') = 1.22107;
+GADJDYN(X,'2032') = 1.258556;
+GADJDYN(X,'2033') = 1.298381;
+GADJDYN(X,'2034') = 1.342932;
+GADJDYN(X,'2035') = 1.386325;
+GADJDYN(X,'2036') = 1.432215;
+GADJDYN(X,'2037') = 1.481249;
+GADJDYN(X,'2038') = 1.53047;
+GADJDYN(X,'2039') = 1.582523;
+GADJDYN(X,'2040') = 1.633676;
+GADJDYN(X,'2041') = 1.694679;
+GADJDYN(X,'2042') = 1.751559;
+GADJDYN(X,'2043') = 1.805337;
+GADJDYN(X,'2044') = 1.860019;
+GADJDYN(X,'2045') = 1.915852;
+GADJDYN(X,'2046') = 1.975469;
+GADJDYN(X,'2047') = 2.018597;
+GADJDYN(X,'2048') = 2.049945;
+GADJDYN(X,'2049') = 2.071517;
+GADJDYN(X,'2050') = 2.085076;
 ;)
 
 
@@ -421,19 +421,22 @@ $offtext
 
     icagr(C,'aprtr',TC)$(EHIntensity(C,'aprtr',TC-1) gt 0.0001) = EHIntensity(C,'aprtr',TC)/EHIntensity(C,'aprtr',TC-1);
 
-* [JS 2022_11_10: exogenous growth of government consumption between 2022 and 2030 (up to a certain limit) of construction and public transport to parameterise WB scenarios:
-    IF(ORD(TC) GE 2 AND ORD(TC) LE 5,
-    icagr('ccons','agsrv',TC)=3.8;
-    );
-    IF(ORD(TC) GE 6 AND ORD(TC) LE 12,
-    icagr('ccons','agsrv',TC)=1.025;
-    );
-   IF(ORD(TC) GE 4 AND ORD(TC) LE 5,
-    icagr('cftrp-l','agsrv',TC)=1.7;
-   );
-   IF(ORD(TC) GE 6 AND ORD(TC) LE 12,
-   icagr('cftrp-l','agsrv',TC)=1.11;
-    );
+* [JS 2022_11_10:
+* exogenous growth of government consumption between 2022 and 2030 (up to a certain limit)
+* of construction and public transport to parameterise WB scenarios:
+* These should be turned off if there is no additional GADJX besides the NoInvestment_Baseline GADJX trajectory.
+*    IF(ORD(TC) GE 2 AND ORD(TC) LE 5,
+*    icagr('ccons','agsrv',TC)=3.8;
+*    );
+*    IF(ORD(TC) GE 6 AND ORD(TC) LE 12,
+*    icagr('ccons','agsrv',TC)=1.025;
+*    );
+*   IF(ORD(TC) GE 4 AND ORD(TC) LE 5,
+*    icagr('cftrp-l','agsrv',TC)=1.7;
+*   );
+*   IF(ORD(TC) GE 6 AND ORD(TC) LE 12,
+*   icagr('cftrp-l','agsrv',TC)=1.11;
+*    );
 
 *ICAGR(C,A,TC)=1;
 
@@ -691,15 +694,15 @@ $offtext
     NOYKFACTOR(X,'2019') = 0.0;
 NOYKFACTOR(X,'2020') = 0.0;
 NOYKFACTOR(X,'2021') = 0.0;
-NOYKFACTOR(X,'2022') = 0.032005;
-NOYKFACTOR(X,'2023') = 0.031997;
-NOYKFACTOR(X,'2024') = 0.031979;
-NOYKFACTOR(X,'2025') = 0.031929;
-NOYKFACTOR(X,'2026') = 0.031863;
-NOYKFACTOR(X,'2027') = 0.031793;
-NOYKFACTOR(X,'2028') = 0.031658;
-NOYKFACTOR(X,'2029') = 0.031578;
-NOYKFACTOR(X,'2030') = 0.031513;
+NOYKFACTOR(X,'2022') = 0.0;
+NOYKFACTOR(X,'2023') = 0.0;
+NOYKFACTOR(X,'2024') = 0.0;
+NOYKFACTOR(X,'2025') = 0.0;
+NOYKFACTOR(X,'2026') = 0.0;
+NOYKFACTOR(X,'2027') = 0.0;
+NOYKFACTOR(X,'2028') = 0.0;
+NOYKFACTOR(X,'2029') = 0.0;
+NOYKFACTOR(X,'2030') = 0.0;
 NOYKFACTOR(X,'2031') = 0.0;
 NOYKFACTOR(X,'2032') = 0.0;
 NOYKFACTOR(X,'2033') = 0.0;
@@ -831,9 +834,45 @@ $include cge\includes\2energychecks.inc
 
 
 *       CA make growth in transfers from government to HH a function of nominal absorption growth plus a small increment
+* [JS 2022_11_21:] the IF(NOT TI(TC), TRNSFRGR statement coeded by CA has been replaced by an exogenous trajectory calibrated
+* on the NoInvestment_Baseline with new closure rules, correct baseline TFP and GADJX, for the WB SDG project:
   IF(NOT T1(TC),
-        TRNSFRGR(H,'GOV',XC,TC+1)=TABS.L/TABSX(XC,TC-1,TT)-1 + .005;
+*        TRNSFRGR(H,'GOV',XC,TC+1)=TABS.L/TABSX(XC,TC-1,TT)-1 + .005;
+   TRNSFRGR(H,'GOV',XC,'2019') = 0 ;
+TRNSFRGR(H,'GOV',XC,'2020') = EPS ;
+TRNSFRGR(H,'GOV',XC,'2021') = -0.05076;
+TRNSFRGR(H,'GOV',XC,'2022') = 0.037216;
+TRNSFRGR(H,'GOV',XC,'2023') = 0.027907;
+TRNSFRGR(H,'GOV',XC,'2024') = 0.023847;
+TRNSFRGR(H,'GOV',XC,'2025') = 0.026967;
+TRNSFRGR(H,'GOV',XC,'2026') = 0.02946;
+TRNSFRGR(H,'GOV',XC,'2027') = 0.029413;
+TRNSFRGR(H,'GOV',XC,'2028') = 0.031131;
+TRNSFRGR(H,'GOV',XC,'2029') = 0.034705;
+TRNSFRGR(H,'GOV',XC,'2030') = 0.035588;
+TRNSFRGR(H,'GOV',XC,'2031') = 0.034196;
+TRNSFRGR(H,'GOV',XC,'2032') = 0.038755;
+TRNSFRGR(H,'GOV',XC,'2033') = 0.038244;
+TRNSFRGR(H,'GOV',XC,'2034') = 0.038848;
+TRNSFRGR(H,'GOV',XC,'2035') = 0.04237;
+TRNSFRGR(H,'GOV',XC,'2036') = 0.040059;
+TRNSFRGR(H,'GOV',XC,'2037') = 0.040139;
+TRNSFRGR(H,'GOV',XC,'2038') = 0.040497;
+TRNSFRGR(H,'GOV',XC,'2039') = 0.03728;
+TRNSFRGR(H,'GOV',XC,'2040') = 0.03813;
+TRNSFRGR(H,'GOV',XC,'2041') = 0.036216;
+TRNSFRGR(H,'GOV',XC,'2042') = 0.038796;
+TRNSFRGR(H,'GOV',XC,'2043') = 0.035527;
+TRNSFRGR(H,'GOV',XC,'2044') = 0.034942;
+TRNSFRGR(H,'GOV',XC,'2045') = 0.035117;
+TRNSFRGR(H,'GOV',XC,'2046') = 0.035319;
+TRNSFRGR(H,'GOV',XC,'2047') = 0.034157;
+TRNSFRGR(H,'GOV',XC,'2048') = 0.010018;
+TRNSFRGR(H,'GOV',XC,'2049') = 0.00594;
+TRNSFRGR(H,'GOV',XC,'2050') = 0.005285;
   );
+
+
 
   CTA_EMRR(CTA)=CTA_EMRRX(CTA,RUN,XC,TC,TT-1);
  );
