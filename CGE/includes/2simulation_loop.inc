@@ -139,20 +139,19 @@ $offtext
 * The purpose of the time series for IADJDYN(T) is to create exogenous investment dynamics for the WB SDG Beyond the Gap report in combination with a fixed investment s-i closure (SICLOS).
 * SICLOS(XC) has already been declared in 2simultion.inc as: SICLOS(XC) = CLOSURES('S-I',XC);
 * The parameter IADJDYN(X,T) is declared in 2simulation.inc
-* Values for scenario (SDGTRABase_BAU) :
  IF(SICLOS(XC) EQ 1 or SICLOS(XC) eq 6,
 IADJDYN(X,'2019') = 1;
 IADJDYN(X,'2020') = 0.908201;
 IADJDYN(X,'2021') = 0.935893;
-IADJDYN(X,'2022') = 0.955153;
-IADJDYN(X,'2023') = 0.972932;
-IADJDYN(X,'2024') = 0.993205;
-IADJDYN(X,'2025') = 1.017697;
-IADJDYN(X,'2026') = 1.045522;
-IADJDYN(X,'2027') = 1.074783;
-IADJDYN(X,'2028') = 1.111527;
-IADJDYN(X,'2029') = 1.145263;
-IADJDYN(X,'2030') = 1.177301;
+IADJDYN(X,'2022') = 0.999628;
+IADJDYN(X,'2023') = 1.01826;
+IADJDYN(X,'2024') = 1.039518;
+IADJDYN(X,'2025') = 1.06512;
+IADJDYN(X,'2026') = 1.09408;
+IADJDYN(X,'2027') = 1.124581;
+IADJDYN(X,'2028') = 1.1627;
+IADJDYN(X,'2029') = 1.197933;
+IADJDYN(X,'2030') = 1.23145;
 IADJDYN(X,'2031') = 1.214543;
 IADJDYN(X,'2032') = 1.253287;
 IADJDYN(X,'2033') = 1.294349;
@@ -216,40 +215,42 @@ DMPSDYN(X,'2050') = -0.015007;
 
 * [JS 2022_11_10] Another Time series for a new exogenous dynamics GDAJDYN(X,T)
 * The parameter GDAJDYN(X,T) is declared in 2projection.inc and used in 2closures.inc
-* Values change for each scenario with different government expenditure, here for scenario (SDGTRABase_BAU):
+* Values change for each scenario with different government expenditure:
+
+* ALTERNATIVE GADJDYN - WITHOUT ADDITIONAL GOV SPEND ON O&M - to test whether ICAGR on its own creates additional demand.
  IF(GOVCLOS(XC) EQ 11,
 GADJDYN(X,'2019') = 1;
 GADJDYN(X,'2020') = 0.936996;
 GADJDYN(X,'2021') = 0.963686;
-GADJDYN(X,'2022') = 0.983729;
-GADJDYN(X,'2023') = 1.002964;
-GADJDYN(X,'2024') = 1.021905;
-GADJDYN(X,'2025') = 1.042309;
-GADJDYN(X,'2026') = 1.063303;
-GADJDYN(X,'2027') = 1.087466;
-GADJDYN(X,'2028') = 1.122706;
-GADJDYN(X,'2029') = 1.154275;
-GADJDYN(X,'2030') = 1.185407;
-GADJDYN(X,'2031') = 1.22107;
-GADJDYN(X,'2032') = 1.258556;
-GADJDYN(X,'2033') = 1.298381;
-GADJDYN(X,'2034') = 1.342932;
-GADJDYN(X,'2035') = 1.386325;
-GADJDYN(X,'2036') = 1.432215;
-GADJDYN(X,'2037') = 1.481249;
-GADJDYN(X,'2038') = 1.53047;
-GADJDYN(X,'2039') = 1.582523;
-GADJDYN(X,'2040') = 1.633676;
-GADJDYN(X,'2041') = 1.694679;
-GADJDYN(X,'2042') = 1.751559;
-GADJDYN(X,'2043') = 1.805337;
-GADJDYN(X,'2044') = 1.860019;
-GADJDYN(X,'2045') = 1.915852;
-GADJDYN(X,'2046') = 1.975469;
-GADJDYN(X,'2047') = 2.018597;
-GADJDYN(X,'2048') = 2.049945;
-GADJDYN(X,'2049') = 2.071517;
-GADJDYN(X,'2050') = 2.085076;
+GADJDYN(X,'2022') = 1.108221;
+GADJDYN(X,'2023') = 1.148931;
+GADJDYN(X,'2024') = 1.190985;
+GADJDYN(X,'2025') = 1.234511;
+GADJDYN(X,'2026') = 1.279436;
+GADJDYN(X,'2027') = 1.325992;
+GADJDYN(X,'2028') = 1.374381;
+GADJDYN(X,'2029') = 1.424707;
+GADJDYN(X,'2030') = 1.476631;
+GADJDYN(X,'2031') = 1.511522;
+GADJDYN(X,'2032') = 1.547237;
+GADJDYN(X,'2033') = 1.583797;
+GADJDYN(X,'2034') = 1.621221;
+GADJDYN(X,'2035') = 1.659528;
+GADJDYN(X,'2036') = 1.698741;
+GADJDYN(X,'2037') = 1.738881;
+GADJDYN(X,'2038') = 1.779969;
+GADJDYN(X,'2039') = 1.822027;
+GADJDYN(X,'2040') = 1.86508;
+GADJDYN(X,'2041') = 1.90915;
+GADJDYN(X,'2042') = 1.954261;
+GADJDYN(X,'2043') = 2.000438;
+GADJDYN(X,'2044') = 2.047706;
+GADJDYN(X,'2045') = 2.096092;
+GADJDYN(X,'2046') = 2.14562;
+GADJDYN(X,'2047') = 2.196319;
+GADJDYN(X,'2048') = 2.248215;
+GADJDYN(X,'2049') = 2.301338;
+GADJDYN(X,'2050') = 2.355717;
 ;)
 
 
@@ -426,16 +427,16 @@ $offtext
 * of construction and public transport to parameterise WB scenarios:
 * These should be turned off if there is no additional GADJX besides the NoInvestment_Baseline GADJX trajectory.
 *    IF(ORD(TC) GE 2 AND ORD(TC) LE 5,
-*    icagr('ccons','agsrv',TC)=3.8;
+*    icagr('ccons','agsrv',TC)=2.95;
 *    );
 *    IF(ORD(TC) GE 6 AND ORD(TC) LE 12,
-*    icagr('ccons','agsrv',TC)=1.025;
+*    icagr('ccons','agsrv',TC)=1.023;
 *    );
-*   IF(ORD(TC) GE 4 AND ORD(TC) LE 5,
-*    icagr('cftrp-l','agsrv',TC)=1.7;
+*   IF(ORD(TC) GE 4 AND ORD(TC) LE 4,
+*    icagr('cftrp-l','agsrv',TC)=1.2;
 *   );
-*   IF(ORD(TC) GE 6 AND ORD(TC) LE 12,
-*   icagr('cftrp-l','agsrv',TC)=1.11;
+*   IF(ORD(TC) GE 5 AND ORD(TC) LE 12,
+*   icagr('cftrp-l','agsrv',TC)=1.045;
 *    );
 
 *ICAGR(C,A,TC)=1;
@@ -694,15 +695,15 @@ $offtext
     NOYKFACTOR(X,'2019') = 0.0;
 NOYKFACTOR(X,'2020') = 0.0;
 NOYKFACTOR(X,'2021') = 0.0;
-NOYKFACTOR(X,'2022') = 0.0;
-NOYKFACTOR(X,'2023') = 0.0;
-NOYKFACTOR(X,'2024') = 0.0;
-NOYKFACTOR(X,'2025') = 0.0;
-NOYKFACTOR(X,'2026') = 0.0;
-NOYKFACTOR(X,'2027') = 0.0;
-NOYKFACTOR(X,'2028') = 0.0;
-NOYKFACTOR(X,'2029') = 0.0;
-NOYKFACTOR(X,'2030') = 0.0;
+NOYKFACTOR(X,'2022') = 0.016003;
+NOYKFACTOR(X,'2023') = 0.015999;
+NOYKFACTOR(X,'2024') = 0.01599;
+NOYKFACTOR(X,'2025') = 0.015965;
+NOYKFACTOR(X,'2026') = 0.015931;
+NOYKFACTOR(X,'2027') = 0.015896;
+NOYKFACTOR(X,'2028') = 0.015829;
+NOYKFACTOR(X,'2029') = 0.015789;
+NOYKFACTOR(X,'2030') = 0.015756;
 NOYKFACTOR(X,'2031') = 0.0;
 NOYKFACTOR(X,'2032') = 0.0;
 NOYKFACTOR(X,'2033') = 0.0;
@@ -723,7 +724,6 @@ NOYKFACTOR(X,'2047') = 0.0;
 NOYKFACTOR(X,'2048') = 0.0;
 NOYKFACTOR(X,'2049') = 0.0;
 NOYKFACTOR(X,'2050') = 0.0;
-
 
 
 
@@ -892,7 +892,7 @@ $batinclude cge\includes\eSAGE_Report.inc
 $include WB-Infrastructure\WBI_Report.inc
 
 *[JS 2022_11_23 I mean to include the GDPTAB calculations of the 3report_loop.inc file, but some parameters are not properly called on,
-* so there are some issues remaining to be solved.
+* so there are some issues remaining to be solved:
 * $include cge\includes\3report_loop.inc
 
 );

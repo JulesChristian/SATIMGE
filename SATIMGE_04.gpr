@@ -7339,8 +7339,8 @@ PlaneRownr=-1
 
 [GDXDIFF]
 FILE1=C:\Models\SATIMGE\SDG_NoInv_Base_ClosSI6GOV11_repro03.gdx
-FILE2=C:\Models\SATIMGE\SDG_NoInv_Base_ClosSI6GOV11_repro02.gdx
-OUTFL=NoInv_NewClos_vs_Urb_BAU
+FILE2=C:\Models\SATIMGE\SDG_NoInv_Baseline.gdx
+OUTFL=NoInv_NewClosRepro03_vs_NoInv_Base_OrigClos
 EPS=0.0
 RELEPS=0.01
 SETIGN=0
@@ -8778,9 +8778,6 @@ SqTrail0=0
 Order=1,2
 Decim=7
 PlaneRownr=-1
-
-[RP:3REPORT_INIT]
-1=
 
 [RP:REFRESH_DEMSTART]
 1=gdx = demstarttest
@@ -11950,9 +11947,6 @@ Order=1
 Decim=7
 PlaneRownr=-1
 
-[RP:3REPORT_LOOP]
-1=
-
 [RP:1DIAGNOSTICS]
 1=
 
@@ -13513,12 +13507,6 @@ PlaneRownr=-1
 [RP:GHGPROCESSREPORT]
 1=
 
-[RP:WBI_INIT]
-1=
-
-[RP:WBI_REPORT]
-1=
-
 [RP:2TIMESREPORT]
 1=
 
@@ -14163,51 +14151,203 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
-[RP:SATIMGE]
-1=r=cge\model, gdx = SDG_NoInv_Base_ClosSI6GOV11_repro03
-2=r=cge\model, gdx = SDG_NoInv_Base_ClosSI6GOV11_repro01
-3=r=cge\model, gdx = SDGbaseTra_AgMax
-4=r=cge\model, gdx = SDGbaseTra_AgMed
-5=r=cge\model, gdx = SDGbaseTra_AgMin
-6=r=cge\model, gdx = SDGbaseTra_RurAS_CRS
-7=r=cge\model, gdx = SDGbaseTra_RurAS_CRG
-8=r=cge\model, gdx = SDGbaseTra_RurAS_CUS
-9=r=cge\model, gdx = SDGbaseTra_RurAS_CUG
-10=r=cge\model, gdx = SDGbaseTra_RurAS_UAcombi
-11=r=cge\model, gdx = SDGbaseTra_UrbAS_ERTHigh_NewClos
-12=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_NewClos
-13=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK3
-14=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK2
-15=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClosNOYK
-16=r=cge\model, gdx = SDGbaseTra_UrbAS_BAU_NewClos
-17=r=cge\model, gdx = SDG_NoInv_Base_ClosuresSI6GOV11_WBIndics
-18=r=cge\model, gdx = SDG_NoInv_Base_ClosuresSI6GOV11
-19=r=cge\model, gdx = SDG_NoInv_Baseline
-20=r=cge\model, gdx = SDGbaseTra_UrbAS_IRTHigh_Interm2_TestNewClosures03
-
 [RP:2CLOSURES]
+1=
+
+[RP:WBI_INIT]
+1=
+
+[RP:WBI_REPORT]
+1=
+
+[RP:3REPORT_LOOP]
+1=
+
+[RP:3REPORT_INIT]
+1=
+
+[GDXDISP: CLOSURES Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: DMPS Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: DTINS Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: DTINSX Par 4]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,3,4,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GOVCLOS Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GOVSHR Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: GSAV Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: IADJ Var 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: IADJDYN Par 3]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,3,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: INVDEM Equ 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: INVSHR Var 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: MPSDEF Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PWMDEF Equ 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: SAVINVBAL Equ 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: SICLOS Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[RP:2SIMULATION_LOOP - COPY]
 1=
 
 [RP:2SIMULATION_LOOP]
 1=
 
+[RP:SATIMGE]
+1=r=cge\model, gdx = SDGbaseTRA_AgMaxv5_3
+2=r=cge\model, gdx = SDGbaseTRA_AgMedv5_3
+3=r=cge\model, gdx = SDGbaseTRA_AgMinv5_3
+4=r=cge\model, gdx = SDGbaseTRA_UrbAS_ERTv5_3
+5=r=cge\model, gdx = SDGbaseTRA_UrbAS_IRTv5_3
+6=r=cge\model, gdx = SDGbaseTRA_UrbAS_BAUv5_3
+7=r=cge\model, gdx = SDGbaseTRA_UrbAS_ERTv5_2
+8=r=cge\model, gdx = SDGbaseTRA_UrbAS_IRTv5_2
+9=r=cge\model, gdx = SDGbaseTRA_Agg_Maxv5
+10=r=cge\model, gdx = SDGbaseTRA_Agg_Medv5
+11=r=cge\model, gdx = SDGbaseTRA_Agg_Minv5
+12=r=cge\model, gdx = SDGbaseTRA_RurAS_CRSv5
+13=r=cge\model, gdx = SDGbaseTRA_RurAS_CRGv5
+14=r=cge\model, gdx = SDGbaseTRA_RurAS_CUSv5
+15=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highRuralK_normhighTFP
+16=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highRuralK_modTFP
+17=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highRuralK
+18=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highTFP
+19=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5
+20=r=cge\model, gdx = SDGbaseTRA_UrbAS_BAUv5_noICAGRwGADJXsomeAddRoadKprod
+
 [MRUFILES]
-1=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
-2=C:\Models\SATIMGE\CGE\includes\2closures.inc
-3=C:\Models\SATIMGE\SATIMGE.lst
-4=C:\Models\SATIMGE\NoInv_NewClos_vs_Urb_BAU.log
-5=C:\Models\SATIMGE\NoInv_NewClos_vs_Urb_BAU.gdx
-6=C:\Models\SATIMGE\CGE\1model.gms
-7=C:\Models\SATIMGE\SDG_NoInv_Baseline.gdx
-8=C:\Models\SATIMGE\SDG_NoInv_Base_ClosuresSI6GOV11_WBIndics.gdx
-9=C:\Models\SATIMGE\SDG_NoInv_Base_ClosuresSI6GOV11.gdx
+1=C:\Models\SATIMGE\SDGbaseTRA_AgMedv5_3.gdx
+2=C:\Models\SATIMGE\SDGbaseTRA_AgMinv5_3.gdx
+3=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_BAUv5_3.gdx
+4=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_IRTv5_3.gdx
+5=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_ERTv5_3.gdx
+6=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_IRTv5_2.gdx
+7=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_ERTv5_2.gdx
+8=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_IRTv5.gdx
+9=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_ERTv5_testGADJnoICAGR.gdx
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\SATIMGE.gms
-FILE1=C:\Models\SATIMGE\SDG_NoInv_Base_ClosSI6GOV11_repro02.gdx
-FILE2=C:\Models\SATIMGE\SATIMGE.gms
+FILE0=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
+FILE1=C:\Models\SATIMGE\SATIMGE.gms
+FILE2=C:\Models\SATIMGE\SATIMGE.lst
+FILE3=C:\Models\SATIMGE\SDGbaseTRA_AgMaxv5_3.gdx
+FILE4=C:\Models\SATIMGE\SDGbaseTRA_AgMaxv5_3.gdx
 MAXIM=0
-TOP=5
-LEFT=27
-HEIGHT=671
-WIDTH=1239
+TOP=31
+LEFT=26
+HEIGHT=884
+WIDTH=1237
