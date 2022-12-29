@@ -14308,26 +14308,26 @@ PlaneRownr=-1
 1=
 
 [RP:SATIMGE]
-1=r=cge\model, gdx = SDGbaseTRA_AgMaxv5_3
-2=r=cge\model, gdx = SDGbaseTRA_AgMedv5_3
-3=r=cge\model, gdx = SDGbaseTRA_AgMinv5_3
-4=r=cge\model, gdx = SDGbaseTRA_UrbAS_ERTv5_3
-5=r=cge\model, gdx = SDGbaseTRA_UrbAS_IRTv5_3
-6=r=cge\model, gdx = SDGbaseTRA_UrbAS_BAUv5_3
-7=r=cge\model, gdx = SDGbaseTRA_UrbAS_ERTv5_2
-8=r=cge\model, gdx = SDGbaseTRA_UrbAS_IRTv5_2
-9=r=cge\model, gdx = SDGbaseTRA_Agg_Maxv5
-10=r=cge\model, gdx = SDGbaseTRA_Agg_Medv5
-11=r=cge\model, gdx = SDGbaseTRA_Agg_Minv5
-12=r=cge\model, gdx = SDGbaseTRA_RurAS_CRSv5
-13=r=cge\model, gdx = SDGbaseTRA_RurAS_CRGv5
-14=r=cge\model, gdx = SDGbaseTRA_RurAS_CUSv5
-15=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highRuralK_normhighTFP
-16=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highRuralK_modTFP
-17=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highRuralK
-18=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highTFP
-19=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5
-20=r=cge\model, gdx = SDGbaseTRA_UrbAS_BAUv5_noICAGRwGADJXsomeAddRoadKprod
+1=r=cge\model, gdx = SDGbaseWaS_1BW_v2
+2=r=cge\model, gdx = SDGbaseWaS_1BW
+3=r=cge\model, gdx = SDGbaseTRA_AgMaxv5_3
+4=r=cge\model, gdx = SDGbaseTRA_AgMedv5_3
+5=r=cge\model, gdx = SDGbaseTRA_AgMinv5_3
+6=r=cge\model, gdx = SDGbaseTRA_UrbAS_ERTv5_3
+7=r=cge\model, gdx = SDGbaseTRA_UrbAS_IRTv5_3
+8=r=cge\model, gdx = SDGbaseTRA_UrbAS_BAUv5_3
+9=r=cge\model, gdx = SDGbaseTRA_UrbAS_ERTv5_2
+10=r=cge\model, gdx = SDGbaseTRA_UrbAS_IRTv5_2
+11=r=cge\model, gdx = SDGbaseTRA_Agg_Maxv5
+12=r=cge\model, gdx = SDGbaseTRA_Agg_Medv5
+13=r=cge\model, gdx = SDGbaseTRA_Agg_Minv5
+14=r=cge\model, gdx = SDGbaseTRA_RurAS_CRSv5
+15=r=cge\model, gdx = SDGbaseTRA_RurAS_CRGv5
+16=r=cge\model, gdx = SDGbaseTRA_RurAS_CUSv5
+17=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highRuralK_normhighTFP
+18=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highRuralK_modTFP
+19=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highRuralK
+20=r=cge\model, gdx = SDGbaseTRA_UrbAS_CUGv5_highTFP
 
 [MRUFILES]
 1=C:\Models\SATIMGE\SDGbaseTRA_AgMedv5_3.gdx
@@ -14338,14 +14338,15 @@ PlaneRownr=-1
 6=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_IRTv5_2.gdx
 7=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_ERTv5_2.gdx
 8=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_IRTv5.gdx
-9=C:\Models\SATIMGE\SDGbaseTRA_UrbAS_ERTv5_testGADJnoICAGR.gdx
 
 [OPENWINDOW_1]
 FILE0=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
 FILE1=C:\Models\SATIMGE\SATIMGE.gms
 FILE2=C:\Models\SATIMGE\SATIMGE.lst
 FILE3=C:\Models\SATIMGE\SDGbaseTRA_AgMaxv5_3.gdx
-FILE4=C:\Models\SATIMGE\SDGbaseTRA_AgMaxv5_3.gdx
+FILE4=C:\Models\SATIMGE\SDGbaseWaS_1BW.gdx
+FILE5=C:\Models\SATIMGE\SDGbaseWaS_1BW_v2.gdx
+FILE6=C:\Models\SATIMGE\SDGbaseWaS_1BW_v2.gdx
 MAXIM=0
 TOP=31
 LEFT=26
