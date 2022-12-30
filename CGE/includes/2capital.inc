@@ -59,7 +59,11 @@ IF (KOPTION EQ 2,
 * QF.L('FSAS','APETR','NAT')$(QF.L('FSAS','APETR','NAT') LT QFS.UP('FSAS')) = QFS.UP('FSAS');
 
 * [JS 2022_11_10] To allow for the substraction in productive output I define a dynamic/trajectory-based exogenous correction of RKAP(FCAP,A,RD) called "NOYKFACTOR(X,T)"
- RKAP(FCAP,A,RD)$(ANFX(A,RD) AND QF0(FCAP,A,RD)) = DKAP(FCAP,A,RD)/QF.L(FCAP,A,RD) - natdrate - NOYKFACTOR(XC,TC);
+* RKAP(FCAP,A,RD)$(ANFX(A,RD) AND QF0(FCAP,A,RD)) = DKAP(FCAP,A,RD)/QF.L(FCAP,A,RD) - natdrate - NOYKFACTOR(XC,TC);
+* [JS 2022_12_30] The NoYKfactor added to render a part of capital unproductive might push RKAP towards negative values for some sectors, ...
+* ... it might thus be better to not deduce it from the = DKAP(...)/... term, but to multiply the DKAP term by it.
+ RKAP(FCAP,A,RD)$(ANFX(A,RD) AND QF0(FCAP,A,RD)) = DKAP(FCAP,A,RD)/QF.L(FCAP,A,RD)*(1 - NOYKFACTOR(XC,TC)) - natdrate ;
+* [JS 2022_11_10] Original SATIMGE definition of RKAP:
 * RKAP(FCAP,A,RD)$(ANFX(A,RD) AND QF0(FCAP,A,RD)) = DKAP(FCAP,A,RD)/QF.L(FCAP,A,RD) - natdrate;
 
 *For capital that is entirely fixed
