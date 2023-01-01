@@ -16,6 +16,7 @@ IF (KOPTION EQ 1,
  NGFCF                   = QINVK - SUM((RD,A,FCAPP)$AFX(A,RD), QF.L(FCAPP,A,RD)*(AFXGR(A,RD,XC,TC) + natdrate));
 );
 
+* [JS 2022_10_11] See 1model.dat Koption is set to 2 !
 IF (KOPTION EQ 2,
 *Targeted capital stock growth rate
 *CA deflates GFCF by an investment price index
