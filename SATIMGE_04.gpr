@@ -14953,47 +14953,48 @@ PlaneRownr=-1
 1=
 
 [RP:SATIMGE]
-1=r=cge\model, gdx = SDGbasicE_3Effi_v6_4
-2=r=cge\model, gdx = SDGbasicE_2Full_v6_4
-3=r=cge\model, gdx = SDGbasicE_1Base_v6_4
-4=r=cge\model, gdx = SDGbaseEdu_1Base_v6_4
-5=r=cge\model, gdx = SDGbaseWaS_2BW_v6_4
-6=r=cge\model, gdx = SDGbaseWaS_2BF_v6_4
-7=r=cge\model, gdx = SDGbaseWaS_1BW_v6_4
-8=r=cge\model, gdx = SDGbaseTRA_AgMax_v6_4
-9=r=cge\model, gdx = SDGbaseTRA_AgMed_v6_4
-10=r=cge\model, gdx = SDGbaseTRA_AgMin_v6_4
-11=r=cge\model, gdx = SDGbaseTRA_CRS_v6_4
-12=r=cge\model, gdx = SDGbaseTRA_CRG_v6_4
-13=r=cge\model, gdx = SDGbaseTRA_CUS_v6_4
-14=r=cge\model, gdx = SDGbaseTRA_CUG_v6_4
-15=r=cge\model, gdx = SDGbaseWaS_2BW_v6_3
-16=r=cge\model, gdx = SDGbaseWaS_2BF_v6_3
-17=r=cge\model, gdx = SDGbaseWaS_1BW_v6_3_LshareTFP
-18=r=cge\model, gdx = SDGbaseTRA_AgMax_v6_3
-19=r=cge\model, gdx = SDGbaseTRA_AgMed_v6_3
-20=r=cge\model, gdx = SDGbaseTRA_AgMin_v6_3
+1=r=cge\model, gdx = SDGbasicE_1Base_v6_4cor
+2=r=cge\model, gdx = SDGbasicE_3Full_v6_4cor
+3=r=cge\model, gdx = SDGbasicE_3Effi_v6_4cor
+4=r=cge\model, gdx = SDGbasicE_3Effi_v6_4
+5=r=cge\model, gdx = SDGbasicE_2Full_v6_4
+6=r=cge\model, gdx = SDGbasicE_1Base_v6_4
+7=r=cge\model, gdx = SDGbaseEdu_1Base_v6_4
+8=r=cge\model, gdx = SDGbaseWaS_2BW_v6_4
+9=r=cge\model, gdx = SDGbaseWaS_2BF_v6_4
+10=r=cge\model, gdx = SDGbaseWaS_1BW_v6_4
+11=r=cge\model, gdx = SDGbaseTRA_AgMax_v6_4
+12=r=cge\model, gdx = SDGbaseTRA_AgMed_v6_4
+13=r=cge\model, gdx = SDGbaseTRA_AgMin_v6_4
+14=r=cge\model, gdx = SDGbaseTRA_CRS_v6_4
+15=r=cge\model, gdx = SDGbaseTRA_CRG_v6_4
+16=r=cge\model, gdx = SDGbaseTRA_CUS_v6_4
+17=r=cge\model, gdx = SDGbaseTRA_CUG_v6_4
+18=r=cge\model, gdx = SDGbaseWaS_2BW_v6_3
+19=r=cge\model, gdx = SDGbaseWaS_2BF_v6_3
+20=r=cge\model, gdx = SDGbaseWaS_1BW_v6_3_LshareTFP
 
 [MRUFILES]
-1=C:\Models\SATIMGE\SDG_NoInv_Base_ClosSI6GOV11_repro02.gdx
-2=C:\Models\SATIMGE\1model.lst
-3=C:\Models\SATIMGE\CGE\includes\2projection - Copy.inc
-4=C:\Models\SATIMGE\SDGbaseWaS_2BW_v6_4.gdx
-5=C:\Models\SATIMGE\CGE\includes\3report_loop.inc
-6=C:\Models\SATIMGE\WB-infrastructure\WBI_init.inc
-7=C:\Models\SATIMGE\WB-infrastructure\WBI_Report.inc
-8=C:\Models\SATIMGE\SDGbaseWaS_2BF_v6_4.gdx
+1=C:\Models\SATIMGE\SDGbasicE_1Base_v6_4.gdx
+2=C:\Models\SATIMGE\SDGbasicE_2Full_v6_4.gdx
+3=C:\Models\SATIMGE\SDGbasicE_3Effi_v6_4.gdx
+4=C:\Models\SATIMGE\SDGbasicE_3Full_v6_4cor.gdx
+5=C:\Models\SATIMGE\SDG_NoInv_Base_ClosSI6GOV11_repro02.gdx
+6=C:\Models\SATIMGE\1model.lst
+7=C:\Models\SATIMGE\CGE\includes\2projection - Copy.inc
+8=C:\Models\SATIMGE\SDGbaseWaS_2BW_v6_4.gdx
+9=C:\Models\SATIMGE\CGE\includes\3report_loop.inc
 
 [OPENWINDOW_1]
 FILE0=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
 FILE1=C:\Models\SATIMGE\SATIMGE.gms
 FILE2=C:\Models\SATIMGE\SATIMGE.lst
-FILE3=C:\Models\SATIMGE\SDGbasicE_1Base_v6_4.gdx
-FILE4=C:\Models\SATIMGE\SDGbasicE_2Full_v6_4.gdx
-FILE5=C:\Models\SATIMGE\SDGbasicE_3Effi_v6_4.gdx
-FILE6=C:\Models\SATIMGE\SDGbasicE_2Full_v6_4.gdx
+FILE3=C:\Models\SATIMGE\SDGbasicE_1Base_v6_4cor.gdx
+FILE4=C:\Models\SATIMGE\SDGbasicE_2Full_v6_4cor.gdx
+FILE5=C:\Models\SATIMGE\SDGbasicE_3Effi_v6_4cor.gdx
+FILE6=C:\Models\SATIMGE\SDGbasicE_3Effi_v6_4cor.gdx
 MAXIM=0
-TOP=66
-LEFT=25
-HEIGHT=629
+TOP=18
+LEFT=7
+HEIGHT=630
 WIDTH=1431
