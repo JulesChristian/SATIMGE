@@ -4609,7 +4609,7 @@ RowDim=3
 Squeeze=1
 SqTrail0=0
 Order=1,2,3,4
-Decim=4
+Decim=5
 PlaneRownr=-1
 
 [GDXDISP: QH Var 2]
@@ -4683,7 +4683,7 @@ Squeeze=1
 SqTrail0=0
 Order=1,6,2,3,4,5
 Decim=4
-PlaneRownr=-1
+PlaneRownr=4
 PlaneFilter1=fcap
 PlaneFilter2=2050
 
@@ -6202,10 +6202,10 @@ PlaneRownr=-1
 
 [GDXDISP: QINTAX Par 5]
 PlaneDim=0
-RowDim=5
+RowDim=4
 Squeeze=1
 SqTrail0=0
-Order=1,2,3,4,5
+Order=1,2,3,5,4
 Decim=7
 PlaneRownr=-1
 
@@ -6615,13 +6615,14 @@ Decim=7
 PlaneRownr=-1
 
 [GDXDISP: YIFX Par 5]
-PlaneDim=0
-RowDim=4
+PlaneDim=1
+RowDim=3
 Squeeze=1
 SqTrail0=0
-Order=1,2,3,5,4
+Order=2,1,3,5,4
 Decim=7
-PlaneRownr=-1
+PlaneRownr=6
+PlaneFilter1=fland
 
 [GDXDISP: GVA_FS_Start Par 2]
 PlaneDim=0
@@ -8613,7 +8614,7 @@ RowDim=4
 Squeeze=1
 SqTrail0=0
 Order=1,2,3,4,6,5
-Decim=2
+Decim=7
 PlaneRownr=4
 PlaneFilter1=fcap
 
@@ -11323,13 +11324,14 @@ Decim=7
 PlaneRownr=-1
 
 [GDXDISP: trnsfrx Par 5]
-PlaneDim=0
-RowDim=4
+PlaneDim=1
+RowDim=3
 Squeeze=1
 SqTrail0=0
-Order=2,1,3,5,4
+Order=4,2,3,5,1
 Decim=7
-PlaneRownr=-1
+PlaneRownr=8
+PlaneFilter1=2027
 
 [GDXDISP: TRSHR Par 1]
 PlaneDim=0
@@ -12414,10 +12416,10 @@ PlaneRownr=-1
 
 [GDXDISP: EHX Par 4]
 PlaneDim=0
-RowDim=4
+RowDim=3
 Squeeze=1
 SqTrail0=0
-Order=1,2,3,4
+Order=1,2,4,3
 Decim=7
 PlaneRownr=-1
 
@@ -13051,9 +13053,6 @@ Order=
 Decim=7
 PlaneRownr=-1
 
-[RP:2CAPITAL - COPY]
-1=
-
 [GDXDISP: MPSADJ0 Par 0]
 PlaneDim=0
 RowDim=0
@@ -13626,9 +13625,6 @@ SqTrail0=0
 Order=
 Decim=7
 PlaneRownr=-1
-
-[RP:1REPBASE]
-1=
 
 [GDXDISP: TINS Var 2]
 PlaneDim=0
@@ -14407,9 +14403,6 @@ Order=
 Decim=7
 PlaneRownr=-1
 
-[RP:2CAPITAL]
-1=
-
 [GDXDISP: QFX Par 7]
 PlaneDim=0
 RowDim=6
@@ -14941,14 +14934,6 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
-[RP:2PROJECTION]
-1=
-
-[RP:1MODEL]
-1=gdx=model s=model
-2=gdx = model s = model
-3=
-
 [RP:2SIMULATION_LOOP]
 1=
 
@@ -14974,23 +14959,176 @@ PlaneRownr=-1
 19=r=cge\model, gdx = SDGbaseTRA_CRS_v7
 20=r=cge\model, gdx = SDGbaseTRA_CUS_v7
 
+[RP:2CAPITAL]
+1=
+
+[RP:2PROJECTION]
+1=
+
+[RP:2CAPITAL - COPY]
+1=
+
+[GDXDISP: PINTAX Par 5]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,5,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ACMACNTP Alias 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PINTA0 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: PINTADEF Equ 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AggFixPrice Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AggVarPrice Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AggVarPrice_H Par 4]
+PlaneDim=0
+RowDim=4
+Squeeze=1
+SqTrail0=0
+Order=1,2,3,4
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AggVarPrice_TS Par 3]
+PlaneDim=0
+RowDim=3
+Squeeze=1
+SqTrail0=0
+Order=1,2,3
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: alphawfdist Par 0]
+PlaneDim=0
+RowDim=0
+Squeeze=1
+SqTrail0=0
+Order=
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: ARMINGTON2 Equ 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CALIB2 Par 2]
+PlaneDim=0
+RowDim=2
+Squeeze=1
+SqTrail0=0
+Order=1,2
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AY Alias 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: AYP Alias 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[GDXDISP: CEGY Set 1]
+PlaneDim=0
+RowDim=1
+Squeeze=1
+SqTrail0=0
+Order=1
+Decim=7
+PlaneRownr=-1
+
+[RP:1REPBASE]
+1=
+
+[RP:1MODEL]
+1=gdx=model s=model
+2=gdx = model s = model
+3=
+
 [MRUFILES]
-1=C:\Models\SATIMGE\SDGbaseAGG_PREF_v7.gdx
-2=C:\Models\SATIMGE\SDGbaseAGG_MIN_v7.gdx
-3=C:\Models\SATIMGE\SDGbaseTVET_NDP_v7.gdx
-4=C:\Models\SATIMGE\SDGbaseTVET_PSET_v7.gdx
-5=C:\Models\SATIMGE\SDGbaseTVET_Base_v7.gdx
-6=C:\Models\SATIMGE\SATIMGE.lst
-7=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
-8=C:\Models\SATIMGE\SDGbaseBasicE_Effi_v7cor.gdx
-9=C:\Models\SATIMGE\SDGbaseBasicE_Full_v7cor.gdx
+1=C:\Models\SATIMGE\SDGbaseTVET_NDP_v7.gdx
+2=C:\Models\SATIMGE\SDGbaseTVET_PSET_v7.gdx
+3=C:\Models\SATIMGE\SDGbaseTVET_Base_v7.gdx
+4=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
+5=C:\Models\SATIMGE\SDGbaseBasicE_Effi_v7cor.gdx
+6=C:\Models\SATIMGE\SDGbaseBasicE_Full_v7cor.gdx
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\SATIMGE.gms
-FILE1=C:\Models\SATIMGE\SDGbaseAGG_MAX_v7.gdx
-FILE2=C:\Models\SATIMGE\SDGbaseAGG_MAX_v7.gdx
+FILE0=C:\Models\SATIMGE\1model.lst
+FILE1=C:\Models\SATIMGE\2simulation_loop.lst
+FILE2=C:\Models\SATIMGE\CGE\1model.gms
+FILE3=C:\Models\SATIMGE\CGE\includes\1repbase.inc
+FILE4=C:\Models\SATIMGE\CGE\includes\2capital - Copy.inc
+FILE5=C:\Models\SATIMGE\CGE\includes\2capital.inc
+FILE6=C:\Models\SATIMGE\CGE\includes\2projection.inc
+FILE7=C:\Models\SATIMGE\SATIMGE - Copy Test3report_inclusion.lst
+FILE8=C:\Models\SATIMGE\SATIMGE.gms
+FILE9=C:\Models\SATIMGE\SATIMGE.lst
+FILE10=C:\Models\SATIMGE\SATIMGE_04.gpr
+FILE11=C:\Models\SATIMGE\SDG_NoInv_Base_ClosSI6GOV11_repro02.gdx
+FILE12=C:\Models\SATIMGE\SDGbaseAGG_MAX_v7.gdx
+FILE13=C:\Models\SATIMGE\SDGbaseAGG_MIN_v7.gdx
+FILE14=C:\Models\SATIMGE\SDGbaseAGG_PREF_v7.gdx
+FILE15=C:\Models\SATIMGE\SATIMGE.gms
 MAXIM=0
 TOP=10
 LEFT=16
-HEIGHT=680
-WIDTH=1372
+HEIGHT=857
+WIDTH=1556
