@@ -14934,40 +14934,6 @@ Order=1,2
 Decim=7
 PlaneRownr=-1
 
-[RP:2SIMULATION_LOOP]
-1=
-
-[RP:SATIMGE]
-1=r=cge\model, gdx = SDGbaseAGG_MAX_v7
-2=r=cge\model, gdx = SDGbaseAGG_PREF_v7
-3=r=cge\model, gdx = SDGbaseAGG_MIN_v7
-4=r=cge\model, gdx = SDGbaseTVET_NDP_v7
-5=r=cge\model, gdx = SDGbaseTVET_PSET_v7
-6=r=cge\model, gdx = SDGbaseTVET_Base_v7
-7=r=cge\model, gdx = SDGbaseBasicE_1Base_v7cor
-8=r=cge\model, gdx = SDGbaseBasicE_2Full_v7cor
-9=r=cge\model, gdx = SDGbaseBasicE_3Effi_v7cor
-10=r=cge\model, gdx = SDGbaseBasicE_3Effi_v7
-11=r=cge\model, gdx = SDGbaseBasicE_2Full_v7
-12=r=cge\model, gdx = SDGbaseBasicE_1Base_v7
-13=r=cge\model, gdx = SDGbaseWaS_2BW_v7
-14=r=cge\model, gdx = SDGbaseWaS_2BF_v7
-15=r=cge\model, gdx = SDGbaseWaS_1BW_v7
-16=r=cge\model, gdx = SDGbaseTRA_AgMax_v7
-17=r=cge\model, gdx = SDGbaseTRA_AgMed_v7
-18=r=cge\model, gdx = SDGbaseTRA_AgMin_v7
-19=r=cge\model, gdx = SDGbaseTRA_CRS_v7
-20=r=cge\model, gdx = SDGbaseTRA_CUS_v7
-
-[RP:2CAPITAL]
-1=
-
-[RP:2PROJECTION]
-1=
-
-[RP:2CAPITAL - COPY]
-1=
-
 [GDXDISP: PINTAX Par 5]
 PlaneDim=0
 RowDim=4
@@ -15094,6 +15060,15 @@ Order=1
 Decim=7
 PlaneRownr=-1
 
+[RP:2PROJECTION]
+1=
+
+[RP:2CAPITAL]
+1=
+
+[RP:2CAPITAL - COPY]
+1=
+
 [RP:1REPBASE]
 1=
 
@@ -15102,31 +15077,48 @@ PlaneRownr=-1
 2=gdx = model s = model
 3=
 
+[RP:2SIMULATION_LOOP]
+1=
+
+[RP:SATIMGE]
+1=r=cge\model, gdx = SDGbaseAGG_MIN_v8
+2=r=cge\model, gdx = SDGbaseAGG_PREF_v8
+3=r=cge\model, gdx = SDGbaseAGG_MAX_v8
+4=r=cge\model, gdx = SDGbaseAGG_MAX_v7
+5=r=cge\model, gdx = SDGbaseAGG_PREF_v7
+6=r=cge\model, gdx = SDGbaseAGG_MIN_v7
+7=r=cge\model, gdx = SDGbaseTVET_NDP_v7
+8=r=cge\model, gdx = SDGbaseTVET_PSET_v7
+9=r=cge\model, gdx = SDGbaseTVET_Base_v7
+10=r=cge\model, gdx = SDGbaseBasicE_1Base_v7cor
+11=r=cge\model, gdx = SDGbaseBasicE_2Full_v7cor
+12=r=cge\model, gdx = SDGbaseBasicE_3Effi_v7cor
+13=r=cge\model, gdx = SDGbaseBasicE_3Effi_v7
+14=r=cge\model, gdx = SDGbaseBasicE_2Full_v7
+15=r=cge\model, gdx = SDGbaseBasicE_1Base_v7
+16=r=cge\model, gdx = SDGbaseWaS_2BW_v7
+17=r=cge\model, gdx = SDGbaseWaS_2BF_v7
+18=r=cge\model, gdx = SDGbaseWaS_1BW_v7
+19=r=cge\model, gdx = SDGbaseTRA_AgMax_v7
+20=r=cge\model, gdx = SDGbaseTRA_AgMed_v7
+
 [MRUFILES]
-1=C:\Models\SATIMGE\SDGbaseTVET_NDP_v7.gdx
-2=C:\Models\SATIMGE\SDGbaseTVET_PSET_v7.gdx
-3=C:\Models\SATIMGE\SDGbaseTVET_Base_v7.gdx
-4=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
-5=C:\Models\SATIMGE\SDGbaseBasicE_Effi_v7cor.gdx
-6=C:\Models\SATIMGE\SDGbaseBasicE_Full_v7cor.gdx
+1=C:\Models\SATIMGE\SDGbaseAGG_PREF_v8.gdx
+2=C:\Models\SATIMGE\SDGbaseAGG_MIN_v8.gdx
+3=C:\Models\SATIMGE\1model.lst
+4=C:\Models\SATIMGE\2simulation_loop.lst
+5=C:\Models\SATIMGE\CGE\1model.gms
+6=C:\Models\SATIMGE\CGE\includes\1repbase.inc
+7=C:\Models\SATIMGE\CGE\includes\2capital - Copy.inc
+8=C:\Models\SATIMGE\CGE\includes\2capital.inc
+9=C:\Models\SATIMGE\CGE\includes\2projection.inc
 
 [OPENWINDOW_1]
-FILE0=C:\Models\SATIMGE\1model.lst
-FILE1=C:\Models\SATIMGE\2simulation_loop.lst
-FILE2=C:\Models\SATIMGE\CGE\1model.gms
-FILE3=C:\Models\SATIMGE\CGE\includes\1repbase.inc
-FILE4=C:\Models\SATIMGE\CGE\includes\2capital - Copy.inc
-FILE5=C:\Models\SATIMGE\CGE\includes\2capital.inc
-FILE6=C:\Models\SATIMGE\CGE\includes\2projection.inc
-FILE7=C:\Models\SATIMGE\SATIMGE - Copy Test3report_inclusion.lst
-FILE8=C:\Models\SATIMGE\SATIMGE.gms
-FILE9=C:\Models\SATIMGE\SATIMGE.lst
-FILE10=C:\Models\SATIMGE\SATIMGE_04.gpr
-FILE11=C:\Models\SATIMGE\SDG_NoInv_Base_ClosSI6GOV11_repro02.gdx
-FILE12=C:\Models\SATIMGE\SDGbaseAGG_MAX_v7.gdx
-FILE13=C:\Models\SATIMGE\SDGbaseAGG_MIN_v7.gdx
-FILE14=C:\Models\SATIMGE\SDGbaseAGG_PREF_v7.gdx
-FILE15=C:\Models\SATIMGE\SATIMGE.gms
+FILE0=C:\Models\SATIMGE\CGE\includes\2simulation_loop.inc
+FILE1=C:\Models\SATIMGE\SATIMGE.gms
+FILE2=C:\Models\SATIMGE\SATIMGE.lst
+FILE3=C:\Models\SATIMGE\SDGbaseAGG_MAX_v8.gdx
+FILE4=C:\Models\SATIMGE\SDGbaseAGG_MAX_v8.gdx
 MAXIM=0
 TOP=10
 LEFT=16
